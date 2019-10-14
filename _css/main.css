@@ -1,0 +1,83 @@
+@charset 'utf-8';
+
+
+
+*{
+  border: none;
+  margin: 0; padding: 0;
+  outline: none
+}
+*[onClick]{ cursor: pointer }
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+  /*user-select: none; -khtml-user-select: none; -moz-user-select: none*/
+}
+
+
+Body{
+  display: flex; flex-direction: column;
+  min-height: 100vh
+}
+Body > Main{ flex-grow: 1 }
+
+
+A,
+*[onClick]{
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition)
+}
+
+Button{
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  padding: 1rem 2rem
+}
+
+Embed,
+Img,
+Object,
+Video{ max-width: 100% }
+Img{
+ line-height: 0;
+ vertical-align: bottom
+}
+
+Table{ border-collapse: collapse }
+
+Ul,
+Ol{ list-style-position: inside }
+Ul Ul,
+Ul Ol,
+Ol Ul,
+Ol Ol{ margin-left: 2rem }
+Ul Ul Ul{ list-style-type: disc }
+Ul Ul{ list-style-type: circle }
+Ul{ list-style-type: square }
+
+H1, H2, H3, H4, H5, H6{
+  font-variant: small-caps;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 0.8rem
+}
+H1{
+  border-bottom: 1px solid rgb(240, 240, 240);
+  font-size: 2.6rem;
+  padding-bottom: 0.4rem
+}
+H2{ font-size: 2.4rem }
+H3{ font-size: 2.2rem }
+H4{ font-size: 2rem }
+H5{ font-size: 1.8rem }
+H6{
+  display: inline;
+  font-size: 1.6rem
+}
+
+Input,
+Textarea{ line-height: 1 }

@@ -1,0 +1,34 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200&subset=cyrillic');
+
+:root{
+    --color-hover: rgb(45, 110, 150);
+    --transition: all 0.4s ease 0s
+}
+
+HTML{
+    font-family: 'Fira Sans', sans-serif; font-size: 10px;
+    hyphens: auto
+}
+
+Body{ font-size: 1.6em }
+
+
+Body > Main > Section,
+Body > Main > Article{ padding-top: 1rem; padding-bottom: 1rem }
+
+
+*[class^='width']{
+    margin: auto;
+    width: 100%
+}
+.width0{ max-width: 1280px }
+.width1{ max-width: 960px }
+
+
+
+@media all and (max-width: 1280px){
+    Body > Main > Section,
+    Body > Main > Article{ padding-right: 1rem; padding-left: 1rem }
+}
