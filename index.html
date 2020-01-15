@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang='ru'>
  <head>
-  <meta content='user-scalable=no, width=460' name='viewport'>
+  <meta content='user-scalable=no, width=420' name='viewport'>
   <meta charset='utf-8'>
   <meta name='author' content='dlbxqp@gmail.com'>
-  <meta name='theme-color' content='#bb8c14'>
+  <meta name='theme-color' content='#404040'>
   <meta name='publisher-URL' content='//'>
 
-  <title>Регистрация в розыгрыше билетов на бой года в Лас-вегасе | Инград</title>
+  <title></title>
 
-  <link href='//ingrad.ru/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <link href='/_images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
 
-  <link href='./_css/normalize.css' rel='stylesheet'>
-  <link href='./_css/main.css' rel='stylesheet'>
-  <link href='./_css/project.css' rel='stylesheet'>
+  <link href='/_css/normalize.css' rel='stylesheet'>
+  <link href='/_css/main.css' rel='stylesheet'>
+  <link href='/_css/project.css' rel='stylesheet'>
 
   <script src='https://yastatic.net/jquery/3.1.1/jquery.min.js'></script>
-  <script src='./_js/jquery.inputmask.min.js'></script>
+  <script src='//api-maps.yandex.ru/2.1/?lang=ru_RU&load=Geolink'></script>
 <!--[if IE]>
   <script>
 document.createElement('figcaption');
@@ -33,224 +33,53 @@ document.createElement('nav');
  </head>
 
  <body>
-  <aside>
+  <header>
    <style>
-Aside{
-  background-color: var(--color-yellow);
-  display: flex; justify-content: center; align-items: center;
-  height: 0;
-  overflow: hidden;
-  position: fixed; top: 0; right: 0; left: 0; z-index: 1;
-  transition: var(--transition);
+Body > Header > Section{
 }
-Aside > Div{
-  font-size: 4rem;
-  margin: 2rem 1rem;
-  text-align: center
-}
+
+
+
+@media all and (max-width: 420px){}
    </style>
 
-   <div role='alert'></div>
+   <section></section>
 
-   <script>
-function closeAlert(){
- if($('Body > Aside').outerHeight() > 0){
-  $('Body > Aside').animate({height: 0}, 400, function(){ $('Body > Aside > Div').text('') })
-  document.location.href = '//www.ingrad.ru/news/410/'
- }
-}
-
-function openAlert(сообщение){
- var мрСообщения = сообщение.split('|'); //console.log(мрСообщения[1])
-
- if(мрСообщения[0] == 0){ $('Body > Aside').css('background-color', 'rgba(200, 35, 0, 0.8)') }
- else{ $('Body > Aside').css('background-color', 'var(--color-yellow)') }
-
- $('Body > Aside > Div').html(мрСообщения[1])
- $('Body > Aside').css('height', '100vh')
-
- setTimeout(closeAlert, 4000)
-}
-   </script>
-  </aside>
+   <script></script>
+  </header>
 
   <main>
-   <article>
+   <section id='one'>
     <style>
-Article{
-  display: flex; flex-direction: column;
-  margin: 1rem auto;
-  max-width: 105rem
-}
+Body > Main > Section#one{  }
 
 
 
-Article > Div:first-of-type{ margin-bottom: 4rem }
-
-Article > Div:first-of-type Img{ max-width: 22rem }
-
-
-
-Article > Div:last-of-type{ display: flex; justify-content: center; align-items: center }
-
-
-Article > Div:last-of-type > Div{
-  color: white;
-  padding: 6.5rem;
-  text-shadow: var(--text-shadow); text-transform: uppercase;
-  width: calc(45rem + (6.5em * 2))
-}
-
-Article > Div:last-of-type > Div H2{
-  font-size: 7.6rem; font-weight: 500;
-  margin-bottom: 4rem
-}
-
-Article > Div:last-of-type > Div P{ font-size: 5rem }
-
-
-Article > Div:last-of-type > Form{
-  background-color: var(--color-yellow);
-  padding: 4rem;
-  width: 46rem
-}
-
-Article > Div:last-of-type > Form > *{ text-align: center }
-Article > Div:last-of-type > Form > *:not(:last-child){ margin-bottom: 2rem }
-
-Article > Div:last-of-type > Form H3{
- font-size: 3.6rem; font-weight: 500;
- margin-bottom: 4rem !important;
- text-transform: uppercase
-}
-
-
-Article > Div:last-of-type > Form Input{ font-size: 2.7rem; font-weight: 300 }
-
-
-Article > Div:last-of-type > Form .checkbox{
-  color: white;
-  display: flex; align-items: flex-start;
-}
-
-Article > Div:last-of-type > Form .checkbox > *:first-child{ padding-top: 0.4rem }
-
-Article > Div:last-of-type > Form .checkbox > *:last-child{
-  font-size: 1.8rem; font-weight: 600;
-  line-height: 0.88;
-  padding: 0 1rem;
-  text-align: left; text-transform: lowercase
-}
-
-Article > Div:last-of-type > Form .checkbox Input{ display: none }
-Article > Div:last-of-type > Form .checkbox Label{
- background-color: white;
- border-radius: 0.4rem;
- cursor: pointer;
- display: block;
- position: relative;
- width: 2.8rem; height: 2.8rem
-}
-Article > Div:last-of-type > Form .checkbox Label.checked{ background: white url(/_images/tick.svg) no-repeat center center; background-size: 80% auto; }
-
-Article > Div:last-of-type > Form .incorrectly{ border: 1px solid red }
-
-
-Article > Div:last-of-type > Form Button{
- background-color: white;
- font-size: 2.6rem; font-weight: 500;
- padding: 1rem;
- text-transform: uppercase;
- transition: var(--transition);
-}
-Article > Div:last-of-type > Form Button[disabled]{ opacity: 0.4 }
-Article > Div:last-of-type > Form Button:not([disabled]):hover{ background-color: rgb(255, 245, 215) }
+@media all and (max-width: 420px){}
     </style>
 
-    <div>
-     <img alt='logotype' src='/_images/logotype.svg' />
-    </div>
+    <div></div>
 
-    <div>
-     <div>
-      <h2>Мой центр спорта</h2>
-      <p>Не&nbsp;упусти&nbsp;шанс выиграть&nbsp;билеты на&nbsp;бой&nbsp;года в&nbsp;Лас&#8209;вегасе!</p>
-     </div>
-
-     <form method='post' role='form'>
-      <h3>Регистрация</h3>
-      <div><input type='text' name='firstName' placeholder='Имя' /></div>
-      <div><input type='text' name='lastName' placeholder='Фамилия' /></div>
-      <div><input type='tel' id='tel' name='tel' placeholder='Телефон*' required /></div>
-      <div><input type='email' id='eMail' name='eMail' placeholder='E-mail*' required /></div>
-      <div class='checkbox'>
-       <div>
-        <label for='consent'></label>
-        <input type='checkbox' id='consent' required />
-       </div>
-       <div>Я подтверждаю своё <a href='/docs/Ingrad.Consent.pdf' target='_blank'>согласие на обработку персональных данных</a></div>
-      </div>
-      <div class='checkbox'>
-       <div>
-        <label for='insight'></label>
-        <input type='checkbox' id='insight' required />
-       </div>
-       <div>Я ознакомлен и согласен с <a href='/docs/Ingrad.Privacy.pdf' target='_blank'>Политикой конфиденциальности</a> и <a href='/docs/Ingrad.Personal_data_processing.pdf' target='_blank'>Политикой обработки персональных данных</a></div>
-      </div>
-      <div>
-       <button disabled>Зарегистрироваться</button>
-      </div>
-     </form>
-    </div>
-
-    <script>
-function validate(){
- if($('#tel').val().replace(/\D+/g, '').length < 10){ $('#tel').addClass('incorrectly') } else{ $('#tel').removeClass('incorrectly') }
- if($('#eMail').val().length < 8){ $('#eMail').addClass('incorrectly') } else{ $('#eMail').removeClass('incorrectly') }
- if($("Article Label[for='consent']").hasClass('checked')){ $("Article Label[for='consent']").removeClass('incorrectly') } else{ $("Article Label[for='consent']").addClass('incorrectly') }
- if($("Article Label[for='insight']").hasClass('checked')){ $("Article Label[for='insight']").removeClass('incorrectly') } else{ $("Article Label[for='insight']").addClass('incorrectly') }
-
- if($('Article Form .incorrectly').length > 0){ $('Article Button').attr('disabled', true) }
- else{ $('Article Button').removeAttr('disabled') }
-}
-
-$('Article Input').bind('blur', validate)
-$('Article Input').bind('keypress', validate)
-
-$('Article Label').bind('click', function(){
- if($(this).hasClass('checked')){
-  $('#consent').removeAttr('checked')
-  $(this).removeClass('checked')
- } else{
-  $('#consent').attr('checked', 'checked')
-  $(this).addClass('checked')
- }
- validate()
-})
-
-$(document).ready(function(){
- $('Article Form')[0].reset()
-
- $('#tel').inputmask('+7 (999) 999-99-99')
- //$('#eMail').inputmask('email')
-})
-    </script>
-   </article>
+    <script></script>
+   </section>
   </main>
 
-  <script>
-$('Button').bind('click', function(e){
- e.preventDefault();
+  <footer>
+   <style>
+Body > Footer > Section{
+}
 
- $.ajax({
-  data: $("Article Form[role='form']").serializeArray(),
-  error: function(data){ openAlert('0|Ошибка при отправке данных') },
-  success: function(data){ openAlert(data) },
-  type: 'POST',
-  url: '/_php/toEMail.php'
- })
- $('Article Form')[0].reset()
-})
+
+
+@media all and (max-width: 420px){}
+   </style>
+
+   <section></section>
+
+   <script></script>
+  </footer>
+
+  </script>
   </script>
  </body>
 </html>
