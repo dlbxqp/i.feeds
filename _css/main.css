@@ -2,6 +2,7 @@
 
 *{
   border: none;
+  line-height: 1;
   margin: 0; padding: 0;
   outline: none
 }
@@ -58,10 +59,4 @@ Ul Ul Ul{ list-style-type: disc }
 Ul Ul{ list-style-type: circle }
 Ul{ list-style-type: square }
 
-H1, H2, H3, H4, H5, H6{
-  line-height: 1;
-  letter-spacing: 0
-}
-
-Input,
-Textarea{ line-height: 1 }
+H1, H2, H3, H4, H5, H6{ letter-spacing: 0 }

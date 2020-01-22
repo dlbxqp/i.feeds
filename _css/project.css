@@ -1,34 +1,6 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@font-face {
-  font-family: 'Futura PT';
-  src: url(/_fonts/futuraPT/Demi.eot);
-  src: url(/_fonts/futuraPT/Demi.woff2) format('woff2'),
-       url(/_fonts/futuraPT/Demi.woff) format('woff'),
-       url(/_fonts/futuraPT/Demi.ttf) format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Futura PT';
-  src: url(/_fonts/futuraPT/Medium.eot);
-  src: url(/_fonts/futuraPT/Medium.eot?#iefix) format('embedded-opentype'),
-       url(/_fonts/futuraPT/Medium.woff2) format('woff2'),
-       url(/_fonts/futuraPT/Medium.woff) format('woff'),
-       url(/_fonts/futuraPT/Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Futura PT';
-  src: url(/_fonts/futuraPT/Light.eot);
-  src: url(/_fonts/futuraPT/Light.eot?#iefix) format('embedded-opentype'),
-       url(/_fonts/futuraPT/Light.woff2) format('woff2'),
-       url(/_fonts/futuraPT/Light.woff) format('woff'),
-       url(/_fonts/futuraPT/Light.ttf) format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap&subset=cyrillic');
 
 :root{
   --color-yellow: rgba(200, 155, 35, 0.8);
@@ -38,14 +10,11 @@
 }
 
 HTML{
-    font-family: 'Futura PT', sans-serif; font-size: 10px;
+    font-family: 'Fira Mono', sans-serif; font-size: 10px;
     /*hyphens: auto*/
 }
 
-Body{
-  background: transparent url(/_images/bg.jpg) no-repeat center center; background-size: cover;
-  font-size: 1.6em
-}
+Body{ font-size: 1.4em }
 
 
 Body > Main{ display: flex; align-items: center }
@@ -56,20 +25,12 @@ Body > Main > Article{ padding-top: 1rem; padding-bottom: 1rem }
 
 Input{
   border-radius: 0.4rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 100%
 }
 
 
 
-@media all and (max-width: 1050px){
- Body > Main > Article{ padding-right: 1rem; padding-left: 1rem }
- Article > Div:last-of-type{ flex-direction: column }
- Article > Div:last-of-type > Div,
- Article > Div:last-of-type > Form{ width: 100% !important; max-width: 42rem }
- Article > Div:last-of-type > Div{
-  margin-bottom: 6rem;
-  padding: 1rem !important
- }
+@media all and (max-width: 320px){
+
 }
- Article > Div:last-of-type > Div H2{ font-size: 7.4rem !important }
