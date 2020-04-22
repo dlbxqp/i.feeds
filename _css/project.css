@@ -4,33 +4,25 @@
 
 :root{
   --color-yellow: rgba(200, 155, 35, 0.8);
-  --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8);
-  --transition: all 0.4s ease 0s
-
+  --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8)
 }
 
 HTML{
-    font-family: 'Fira Mono', sans-serif; font-size: 10px;
-    /*hyphens: auto*/
+  font-family: 'Fira Mono', sans-serif; font-size: 10px;
+  /*hyphens: auto*/
 }
 
 Body{ font-size: 1.4em }
 
 
-Body > Main{ display: flex; align-items: center }
+Body > Main{ display: flex; justify-content: center; align-items: center }
 
 Body > Main > Section,
 Body > Main > Article{ padding-top: 1rem; padding-bottom: 1rem }
 
 
-Input{
-  border-radius: 0.4rem;
-  padding: 1rem 2rem;
-  width: 100%
-}
+Input{ border-radius: 0.4rem }
 
 
 
-@media all and (max-width: 320px){
-
-}
+@media all and (max-width: 320px){}
