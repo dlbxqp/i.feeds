@@ -16,6 +16,7 @@
 
 Body{
   display: flex; flex-direction: column;
+  quotes: '«' '»';
   min-height: 100vh
 }
 Body > Main{ flex-grow: 1 }
@@ -39,6 +40,11 @@ Textarea{
 Textarea{ resize: vertical }
 Input:focus,
 Textarea:focus{ border-color: black }
+Input[type='checkbox'],
+Input[type='radio']{
+ vertical-align: middle;
+ width: auto
+}
 
 Button{
  background-color: lightGrey;
@@ -54,7 +60,7 @@ Object,
 Video{ max-width: 100% }
 Img{
  line-height: 0;
- vertical-align: center
+ vertical-align: bottom
 }
 
 Table{ border-collapse: collapse }
@@ -69,4 +75,7 @@ Ul Ul Ul{ list-style-type: disc }
 Ul Ul{ list-style-type: circle }
 Ul{ list-style-type: square }
 
-H1, H2, H3, H4, H5, H6{ letter-spacing: 0 }
+H1, H2, H3, H4, H5, H6{
+  letter-spacing: 0;
+  margin: 0
+}
