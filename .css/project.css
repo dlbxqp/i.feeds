@@ -12,16 +12,14 @@ HTML{
  /*hyphens: auto*/
 }
 
-Body{ font-size: 1.4em }
+Body{
+ font-size: 1.4em
+}
 
 
-Body > Main{ display: flex; justify-content: center; align-items: center }
-
-Body > Main > Section,
-Body > Main > Article{ padding-top: 1rem; padding-bottom: 1rem }
-
-
-Input{ border-radius: 0.4rem }
+Body > Main{
+ display: flex; justify-content: center; align-items: center
+}
 
 
 

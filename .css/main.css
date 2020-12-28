@@ -29,8 +29,12 @@ Button:not(:disabled){
  cursor: pointer;
  transition: var(--transition)
 }
-A{ color: inherit }
-A:hover{ text-decoration: none }
+A{
+ color: inherit
+}
+A:hover{
+ text-decoration: none
+}
 
 Input,
 Textarea{
@@ -38,9 +42,13 @@ Textarea{
  padding: 1rem;
  width: 100%
 }
-Textarea{ resize: vertical }
+Textarea{
+ resize: vertical
+}
 Input:focus,
-Textarea:focus{ border-color: black }
+Textarea:focus{
+ border-color: black
+}
 Input[type='checkbox'],
 Input[type='radio']{
  vertical-align: middle;
@@ -53,28 +61,44 @@ Button{
  display: inline-block;
  padding: 1rem
 }
-Button:hover{ background-color: transparent }
+Button:hover{
+ background-color: transparent
+}
 
 Embed,
 Img,
 Object,
-Video{ max-width: 100% }
+Video{
+ max-width: 100%
+}
 Img{
  line-height: 0;
  vertical-align: bottom
 }
 
-Table{ border-collapse: collapse }
+Table{
+ border-collapse: collapse
+}
 
 Ul,
-Ol{ list-style-position: inside }
+Ol{
+ list-style-position: inside
+}
 Ul Ul,
 Ul Ol,
 Ol Ul,
-Ol Ol{ margin-left: 2rem }
-Ul Ul Ul{ list-style-type: disc }
-Ul Ul{ list-style-type: circle }
-Ul{ list-style-type: square }
+Ol Ol{
+ margin-left: 2rem
+}
+Ul Ul Ul{
+ list-style-type: disc
+}
+Ul Ul{
+ list-style-type: circle
+}
+Ul{
+ list-style-type: square
+}
 
 H1, H2, H3, H4, H5, H6{
  letter-spacing: 0;
