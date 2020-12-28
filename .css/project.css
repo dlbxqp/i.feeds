@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap&subset=cyrillic');
 
 :root{
- --color-yellow: rgba(200, 155, 35, 0.8);
+ --color-yellow: rgb(255, 200, 20);
  --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8)
 }
 

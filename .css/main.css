@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-:root{ --transition: all 0.4s ease 0s }
+:root{
+ --transition: all 0.4s ease 0s;
+ --max-width: calc(100% - (10px * 2))
+}
 
 *,
 *::before,
