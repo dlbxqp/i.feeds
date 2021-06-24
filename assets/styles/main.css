@@ -15,6 +15,9 @@
  outline: none;
  /*user-select: none; -khtml-user-select: none; -moz-user-select: none*/
 }
+*::selection{
+ background-color: rgba(255, 200, 10, 0.2)
+}
 
 
 Body{
