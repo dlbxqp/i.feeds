@@ -20,90 +20,94 @@
 }
 
 
-Body{
+body{
  quotes: '«' '»';
  min-height: 100vh;
  line-height: 1
 }
 
 *[onClick],
-A[href],
-Button:not(:disabled){
+a[href],
+button:not(:disabled){
  cursor: pointer;
  transition: var(--transition)
 }
-A{
+a{
  color: inherit
 }
-A:hover{
+a:hover{
  text-decoration: none
 }
 
-Input,
-Textarea{
+input,
+textarea{
  border: 1px solid grey;
  padding: 1rem;
  width: 100%
 }
-Textarea{
+textarea{
  resize: vertical
 }
-Input:focus,
-Textarea:focus{
+input:focus,
+textarea:focus{
  border-color: black
 }
-Input[type='checkbox'],
-Input[type='radio']{
+input[type='checkbox'],
+input[type='radio']{
  vertical-align: middle;
  width: auto
 }
 
-Button{
+button{
  background-color: lightGrey;
  border: 1px solid grey;
  display: inline-block;
- padding: 1rem
+ padding: 1rem;
+ transition: var(--transition)
 }
-Button:hover{
+button[disabled]{
+ opacity: 0.6
+}
+button:not([disabled]):hover{
  background-color: transparent
 }
 
-Embed,
-Img,
-Object,
-Video{
+embed,
+img,
+object,
+video{
  max-width: 100%
 }
-Img{
+img{
  line-height: 0;
  vertical-align: bottom
 }
 
-Table{
+table{
  border-collapse: collapse
 }
 
-Ul,
-Ol{
+ul,
+ol{
  list-style-position: inside
 }
-Ul Ul,
-Ul Ol,
-Ol Ul,
-Ol Ol{
+ul ul,
+ul ol,
+ol ul,
+ol ol{
  margin-left: 2rem
 }
-Ul Ul Ul{
+ul ul ul{
  list-style-type: disc
 }
-Ul Ul{
+ul ul{
  list-style-type: circle
 }
-Ul{
+ul{
  list-style-type: square
 }
 
-H1, H2, H3, H4, H5, H6{
+h1, h2, h3, h4, h5, h6{
  letter-spacing: 0;
  margin: 0
 }

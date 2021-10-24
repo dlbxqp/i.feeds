@@ -7,20 +7,22 @@
  --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8)
 }
 
-HTML{
+html{
  font-family: 'Fira Mono', sans-serif; font-size: 10px;
  /*hyphens: auto*/
 }
 
-Body{
+body{
  font-size: 1.4em
 }
 
 
-Body > Main{
+body > main{
  display: flex; justify-content: center; align-items: center
 }
 
 
 
-@media all and (max-width: 320px){}
+@media all and (max-width: 320px){
+
+}
