@@ -28,7 +28,7 @@ foreach($aCompleted as $v){
    $aCounts[ $v['BuildingGroupName'] ][ $v['AddressNumber'] ]['storage rooms'] += $c;
 
   } elseif(
-   stripos($v['BuildingGroupName'], 'Экодолье Шолохово') !== false or
+   stripos($v['BuildingGroupName'], 'Шолохово') !== false or
    stripos($v['BuildingGroupName'], 'Солнечный Берег') !== false or
    stripos($v['BuildingGroupName'], 'Мартемьяново') !== false
   ){

@@ -3,6 +3,25 @@ function getCian($a){
  $content = '';
  foreach((array)$a as $v){
   #< data
+   #< plot or cottage
+  if($v['type'] == 'жилой дом и придомовой участок'){
+   $cottageData = <<<HD
+  <Category>cottageSale</Category>
+  <TotalArea>{$v['building project']['area']['design']}</TotalArea>
+  <FloorsCount>{$v['building project']['floors']}</FloorsCount>
+  <RoomsCount>{$v['building project']['rooms count']}</RoomsCount>
+  <BedroomsCount>{$v['building project']['bathrooms']}</BedroomsCount>
+  <HasGarage>{$v['building project']['has garage']}</HasGarage>
+  <HasTerrace>{$v['building project']['has terrace']}</HasTerrace>
+  <HasElectricity>true</HasElectricity>
+  <HasWater>true</HasWater>
+
+HD;
+  } else{
+   $cottageData = "  <Category>landSale</Category>\r\n";
+  }
+   #> plot or cottage
+
    #< images
   $images = '';
   if(count($v['images']) > 0){
@@ -19,22 +38,6 @@ HD;
   }
   $images = "  <Photos>{$images}  </Photos>\n";
    #> images
-
-   #< additional plots data
-  if($v['plots data']){
-   $plotsData = <<<HD
-  <Category>cottageSale</Category>
-  <TotalArea>{$v['plots data']['house area']}</TotalArea>
-  <FloorsCount>{$v['plots data']['floors']}</FloorsCount>
-
-HD;
-  } else{
-   $plotsData = <<<HD
-  <Category>landSale</Category>
-
-HD;
-  }
-   #> additional plots data
   #> data
 
   $content .= <<<HD
@@ -50,11 +53,11 @@ HD;
 {$images}  <ExternalId>{$v['code']}</ExternalId>
   <Title>{$v['title']}</Title>
   <Description>{$v['description']}</Description>
-  <Address>{$v['project']['address']}</Address>
+  <Address>{$v['house']['address']}</Address>
   <SettlementName>{$v['project']['name']}</SettlementName>
   <Coordinates>
-   <Lat>{$v['project']['latitude']}</Lat>
-   <Lng>{$v['project']['longitude']}</Lng>
+   <Lat>{$v['house']['latitude']}</Lat>
+   <Lng>{$v['house']['longitude']}</Lng>
   </Coordinates>
   <Phones>
    <PhoneSchema>
@@ -66,7 +69,7 @@ HD;
    <Name>{$v['project']['name']}</Name>
   </JKSchema>
   <HasElectricity>true</HasElectricity>
-{$plotsData}  <b>{$v['house']['number']}</b>
+{$cottageData}  <b>{$v['house']['number']}</b>
  </object>
 
 HD;

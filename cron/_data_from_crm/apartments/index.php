@@ -17,10 +17,24 @@ $options = [
 ];
 curl_setopt_array($ch, $options);
 //$aTest['StatusCodes'] = [];
-$aBuildingsIds = json_decode( file_get_contents(__DIR__ . '/../buildings/buildingsIds.json') ); //die('> <pre>' . print_r($aBuildingsIds, true) . '</pre>');
-foreach($aBuildingsIds as $buildingId){
+$aBuildingsIds = json_decode( file_get_contents(__DIR__ . '/../buildings/buildings_.json') ); //die('> <pre>' . print_r($aBuildingsIds, true) . '</pre>');
+foreach($aBuildingsIds as $buildingId => $buildingCRMAddress){
  curl_setopt($ch, CURLOPT_URL, $url . $buildingId);
- $xml = curl_exec($ch); //die('> ' . print_r($xml));
+ $xml = curl_exec($ch); //die('<pre>' . print_r($xml, true) . '</pre>');
+ $aResponseInfo = curl_getinfo($ch); //die('<pre>' . print_r($aResponseInfo, true) . '</pre>');
+ #
+ if($aResponseInfo['http_code'] >= 300){
+  $to = 'guztv@ingrad.com';
+  $message = 'Ошибка при обращении к crm в скрипте: ' . __FILE__ . '<br><pre>' . print_r($aResponseInfo, true) . '</pre>';
+  mail($to, 'Alarm wd.i/f2', $message, [
+   'From' => $to,
+   'Reply-To' => $to,
+   'X-Mailer' => 'PHP/' . phpversion()
+  ]);
+
+  exit($message);
+ }
+ #
  $xml = str_replace('a:', '', $xml);
  $xml = str_replace('b:', '', $xml);
 
@@ -30,10 +44,6 @@ foreach($aBuildingsIds as $buildingId){
  $oRows = $object->XMLApartmentListDataResult;
  $aRows = json_decode( json_encode($oRows),true ); //die('> <pre>' . print_r($aRows, true) . '</pre>');
  foreach($aRows['Apartment'] as $value){
-  if(
-   (int)$value['StatusCode'] != 4 and
-   (int)$value['StatusCode'] != 8
-  ){ continue; }
   //$aTest['StatusCodes'][(int)$value['StatusCode']] = $value['StatusCodeName'];
 
   $buildingGroupId = $value['BuildingGroupId'];

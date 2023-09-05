@@ -21,7 +21,7 @@ function getAvito($a){
   <Address>{$v['house']['address']}</Address>
   <BuildingType>Жилой дом</BuildingType>
   <Category>Коммерческая недвижимость</Category>
-  <ContactPhone>+749{$v['phone number']['avito']}</ContactPhone>
+  <ContactPhone>+749{$v['phone numbers']['avito']}</ContactPhone>
   <Decoration>Чистовая</Decoration>
   <Description>{$v['description']}</Description>
   <Floor>{$v['floor number']}</Floor>

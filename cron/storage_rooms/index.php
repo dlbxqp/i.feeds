@@ -6,8 +6,7 @@ $aAdditionalData['projects'] = json_decode( file_get_contents(__DIR__ . '/../_ad
 $aAdditionalData['phones'] = json_decode( file_get_contents(__DIR__ . '/../_additional_data/phones.json', true), true );
 #
 #< images
-function getAdditionalImages($projectCode){
- $dir = "additional_data/{$projectCode}/images";
+function getAdditionalImages($dir){
  $url = 'https://wd.ingrad.ru/f2/cron/storage_rooms/' . $dir;
  $a = [];
 
@@ -27,23 +26,41 @@ $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/compl
 $a = $aTest = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
- if(stripos($building['Name'], 'кладовые') === false){
-  continue;
- }
- #> filter
+ if(stripos($building['Name'], 'кладовые') === false) continue;
+ #> filter...
 
+ #< data
  $a_addressNumber = explode('-', $building['AddressNumber']);
  (count($a_addressNumber) > 1) && ( $building['AddressNumber'] = trim($a_addressNumber[0]) );
- #
+
  $a_deliveryPeriod = explode('к', "{$building['DeliveryPeriod']}");
- #
+
  $aCurrentProjectAdditionalData = $aAdditionalData['projects'][ $building['BuildingGroupID'] ]; //die('<pre>' . print_r($aCurrentProjectAdditionalData, true) . '</pre>');
 
-
+ $address = (string)$aCurrentProjectAdditionalData['buildings'][ $building['AddressNumber'] ]['address'];
+ //($address == '') && ($address = (string)$building['AddressGeocoder']['beautified address']); - говорят неверные адреса
+ ($address == '') && ($address = (string)$building['AddressBuild']);
+ #> data
 
  foreach((array)$building['Sections']['Section'] as $section){ //die('=> <pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
+   #< ...filter
+   if($apartment['StatusCode'] != 4) continue;
+   if( is_string($apartment['DependentId']) ) continue;
+   #> filter
+
+   #< data
    $title = "Кладовая {$apartment['Code']} в {$apartment['BuildingGroup']}";
+
+   $area = $apartment['Quantity'];
+   if(isset($apartment['SpaceBti']) && $apartment['SpaceBti'] !== ''){
+    $area = $apartment['SpaceBti'];
+   }
+   if(isset($apartment['SpaceDesign']) && $apartment['SpaceDesign'] !== ''){
+    $area = $apartment['SpaceDesign'];
+   }
+   #> data
+
    $a[(string)$apartment['Code']] = [
     'project' => [
      'crm-id' => (string)$building['BuildingGroupID'],
@@ -56,7 +73,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
      'number' => (string)$building['AddressNumber'], //именно string
      'title' => (string)$building['Name'],
      'region' => (string)$building['AddressRegion'],
-     'address' => (is_array($building['AddressBuild']) ? '' : (string)$building['AddressBuild']),
+     'address' => $address,
      'built year' => count($a_deliveryPeriod) > 1 ? (int)$a_deliveryPeriod[1] : ''
     ],
     'section' => [
@@ -65,14 +82,17 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
     'article type' => (string)$apartment['ArticleType'],
     'code' => (string)$apartment['Code'],
     'crm-membership' => (string)$apartment['AddressName'],
-    'price' => (double)$apartment['Price'],
-    'area' => (((int)$apartment['SpaceBti'] > 0) ? (double)$apartment['SpaceBti'] : (double)$apartment['SpaceDesign']),
+    'price' => (double)$apartment['DiscountMax'], //Price
+    'area' => $area,
     'title' => (string)$title,
     'description' => (string)$title . " по адресу {$building['AddressBuild']}; секция №{$section['SectionNumber']}",
     'floor number' => (int)$apartment['Floor'],
     'floors count' => abs($building['FloorsCount']),
-    'phone number' => $aAdditionalData['phones']['Кладовые'],
-    'images' => getAdditionalImages($aCurrentProjectAdditionalData['title'])
+    'phone numbers' => $aAdditionalData['phones']['Кладовые'],
+    'images' => array_merge(
+     getAdditionalImages('additional_data/images'),
+     getAdditionalImages("additional_data/{$aCurrentProjectAdditionalData['title']}/images")
+    )
    ];
 
    #< test

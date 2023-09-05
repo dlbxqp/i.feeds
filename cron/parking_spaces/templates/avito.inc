@@ -23,7 +23,7 @@ function getAvito($a){
   <Country>Россия</Country>
   <Address>{$v['house']['address']}</Address>
   <Category>Гаражи и машиноместа</Category>
-  <ContactPhone>+749{$v['phone number']['avito']}</ContactPhone>
+  <ContactPhone>+749{$v['phone numbers']['avito']}</ContactPhone>
   <Decoration>Чистовая</Decoration>
   <Description>{$v['description']}</Description>
   <Floor>{$v['floor number']}</Floor>

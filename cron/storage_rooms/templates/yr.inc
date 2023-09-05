@@ -33,7 +33,7 @@ function getYR($a){
    <address>{$v['house']['address']}</address>
   </location>
   <sales-agent>
-   <phone>+749{$v['phone number']['yr']}</phone>
+   <phone>+749{$v['phone numbers']['yr']}</phone>
    <category>застройщик</category>
    <organization>ГК «Инград»</organization>
   </sales-agent>

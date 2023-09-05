@@ -2,47 +2,60 @@
 include __DIR__ . '/../../../assets/includes/ini_set.inc';
 
 
-$url = 'https://crm.dmfs.ru/Service/ExportToSite.svc/AddressListFull/xml';
-
 $ch = curl_init();
+#
 $options = [
+ CURLOPT_URL => 'https://crm.dmfs.ru/Service/ExportToSite.svc/AddressListFull/xml',
  CURLOPT_REFERER => 'https://wd.ingrad.ru',
  CURLOPT_RETURNTRANSFER => TRUE,
  CURLOPT_ENCODING => ''
 ];
 curl_setopt_array($ch, $options);
-curl_setopt($ch, CURLOPT_URL, $url);
-$xml = curl_exec($ch); //die('<pre>' . print_r($xml) . '</pre>');
+$xml = curl_exec($ch); //die('<pre>' . print_r($xml, true) . '</pre>');
+$aResponseInfo = curl_getinfo($ch); //die('<pre>' . print_r($aResponseInfo, true) . '</pre>');
+#
+if($aResponseInfo['http_code'] >= 300){
+ $to = 'guztv@ingrad.com';
+ $message = 'Ошибка при обращении к crm в скрипте: ' . __FILE__ . '<br><pre>' . print_r($aResponseInfo, true) . '</pre>';
+ mail($to, 'Alarm wd.i/f2', $message, [
+  'From' => $to,
+  'Reply-To' => $to,
+  'X-Mailer' => 'PHP/' . phpversion()
+ ]);
+
+ exit($message);
+}
+#
+curl_close($ch);
+
 $xml = str_replace('a:', '', $xml);
 $xml = str_replace('b:', '', $xml);
-
 $object = new SimpleXMLElement($xml);
 $oRows = $object->XMLAddressListFullDataResult;
 $aRows = json_decode( json_encode($oRows),true); //die('> <pre>' . print_r($aRows, true) . '</pre>');
-//$aProjectsIds = [];
-$aBuildingsIds = [];
-$aTable = [];
+
+$aTable = [
+ 0 => [],
+ 1 => []
+];
 foreach($aRows['Building'] as $value){
- if((string)$value['WithoutPrice'] == 'true'){
-  continue;
- }
- $key = (string)$value['BuildingID'];
+ #< filter
+ if((string)$value['WithoutPrice'] == 'true') continue;
+ #> filter
 
- $aBuildingsIds[] = $key;
-
- $aTable[$key]['AddressRegion'] = ( mb_stripos((string)$value['AddressBuild'], 'Москва') === false) ? 'МО' : 'Москва';
-
+ #< data
  foreach((array)$value as $k => $v){
-  $aTable[$key][ucfirst($k)] = $v;
+  $aTable[0][ (string)$value['BuildingID'] ][ucfirst($k)] = $v;
  }
 
- unset($key);
+ $aTable[1][ (string)$value['BuildingID'] ] = (string)$value['AddressBuild'];
+ #> data
 }
 
 
-//file_put_contents(__DIR__ . '/projectsIds.json', json_encode( array_unique($aProjectsIds) ) );
-file_put_contents(__DIR__ . '/buildingsIds.json', json_encode($aBuildingsIds) );
-file_put_contents(__DIR__ . '/buildings.json', json_encode($aTable, JSON_UNESCAPED_UNICODE) );
+
+file_put_contents(__DIR__ . '/buildings.json', json_encode($aTable[0], JSON_UNESCAPED_UNICODE) );
+file_put_contents(__DIR__ . '/buildings_.json', json_encode($aTable[1], JSON_UNESCAPED_UNICODE) );
 
 
-echo '<p>' . count($aTable) . ' корпусов: </p><pre>' . print_r($aTable, true) . '</pre>';
+echo '<p>' . count($aTable[0]) . ' корпусов: </p><pre>' . print_r($aTable, true) . '</pre>';

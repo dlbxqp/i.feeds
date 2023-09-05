@@ -10,7 +10,8 @@ body{
 
 main{
  display: flex; flex-direction: column;
- min-height: calc(100vh - (10px * 2))
+ position: relative;
+ width: 100vw; min-height: calc(100vh - (10px * 2))
 }
 
 
@@ -28,7 +29,7 @@ header select{
 output{
  display: flex;
  flex-grow: 1;
- padding: 10px;
+ overflow-x: scroll;
  width: 100%
 }
 
@@ -48,12 +49,17 @@ div#crm_data{
 
 h2{
  font-size: 0.8em;
- margin-bottom: 10px
+ margin-bottom: 10px;
+ white-space: nowrap
 }
 h5,
 h6{
  font-size: 1em; font-weight: 400;
  flex-grow: 1
+}
+h5{
+ margin-right: 20px;
+ order: 1
 }
 h6{
  margin-right: 10px
@@ -84,8 +90,39 @@ h2 + ul{
  flex-grow: 1
 }
 
+strong{
+ order: 2
+}
+
+li > ul{
+ order: 3
+}
 span{
  color: brown
+}
+
+
+output *{
+ transition: var(--transition)
+}
+
+output > div > ul > li{
+ cursor: pointer
+}
+
+div > ul > li > ul{
+ height: 0;
+ overflow: hidden
+}
+div > ul > li > ul.active{
+ height: auto
+}
+
+
+#crm_data{
+ background-color: white;
+ border-right: 1px solid var(--color-yellow);
+ position: sticky; left: 0
 }
 </style>
 
@@ -96,7 +133,7 @@ span{
   <option value="parking spaces">Машиноместа</option>
   <option value="storage rooms">Кладовки</option>
   <option value="suburban">Загородная недвижимость</option>
-  <option value="apartments">Квартиры (test)</option>
+  <option value="apartments">Квартиры</option>
  </select>
 </header>
 
@@ -115,6 +152,14 @@ const getCRMCounts = () => {
   url: 'https://wd.ingrad.ru/f2/api/counts/crm/'
  })
  .then((response) => { //console.log('response.data', response.data)
+  const data = Object.keys(response.data).sort().reduce(
+   (obj, key) => {
+    obj[key] = response.data[key]
+    return obj
+   },
+   {}
+  )
+
   const div = document.createElement('div')
   div.id = 'crm_data'
   const h2 = document.createElement('h2')
@@ -122,10 +167,10 @@ const getCRMCounts = () => {
   div.append(h2)
 
   const ul_projects = document.createElement('ul')
-  for(k in response.data){
+  for(k in data){
    const ul_houses = document.createElement('ul')
-   for(kk in response.data[k]){
-    if( !response.data[k][kk][select.value] ) continue
+   for(kk in data[k]){
+    if( !data[k][kk][select.value] ) continue
 
     const li_house = document.createElement('li')
 
@@ -136,7 +181,7 @@ const getCRMCounts = () => {
     }
 
     const span = document.createElement('span')
-    span.innerText = response.data[k][kk][select.value]
+    span.innerText = data[k][kk][select.value]
     li_house.append(span)
 
     ul_houses.append(li_house)
@@ -145,9 +190,21 @@ const getCRMCounts = () => {
 
    const li_project = document.createElement('li')
    const h5 = document.createElement('h5')
-   h5.innerText = k
+   h5.dataset.title = h5.innerText = k
    li_project.append(h5)
    li_project.append(ul_houses)
+
+   //< количество по проекту
+   {
+    const strong = document.createElement('strong')
+    strong.innerText = 0
+    const cSpan = li_project.querySelectorAll('span')
+    cSpan.forEach((span) => {
+     strong.innerText = strong.innerText * 1 + span.innerText * 1
+    })
+    li_project.append(strong)
+   }
+   //> количество по проекту
 
    ul_projects.append(li_project)
   }
@@ -181,16 +238,24 @@ const getFeedCounts = (feedName) => {
    'feed': feedName
   }
  }).then((response) => { //console.log(feedName, response.data)
+  const data = Object.keys(response.data).sort().reduce(
+   (obj, key) => {
+    obj[key] = response.data[key]
+    return obj
+   },
+   {}
+  )
+
   const div = document.createElement('div')
   const h2 = document.createElement('h2')
   h2.textContent = feedName
   div.append(h2)
 
   const ul_projects = document.createElement('ul')
-  for(k in response.data){ //console.log('k', k)
+  for(k in data){ //console.log('k', k)
    const ul_houses = document.createElement('ul')
-   for(kk in response.data[k]){ //console.log('kk', kk)
-    if( !response.data[k][kk][select.value.replace(' ', '_')] ) continue
+   for(kk in data[k]){ //console.log('kk', kk)
+    if( !data[k][kk][select.value.replace(' ', '_')] ) continue
 
     const li_house = document.createElement('li')
 
@@ -201,7 +266,7 @@ const getFeedCounts = (feedName) => {
     }
 
     const span = document.createElement('span')
-    span.innerText = response.data[k][kk][select.value.replace(' ', '_')]
+    span.innerText = data[k][kk][select.value.replace(' ', '_')]
     li_house.append(span)
 
     ul_houses.append(li_house)
@@ -210,9 +275,21 @@ const getFeedCounts = (feedName) => {
 
    const li_project = document.createElement('li')
    const h5 = document.createElement('h5')
-   h5.innerText = k
+   h5.dataset.title = h5.innerText = k
    li_project.append(h5)
    li_project.append(ul_houses)
+
+   //< количество по проекту
+   {
+    const strong = document.createElement('strong')
+    strong.innerText = 0
+    const cSpan = li_project.querySelectorAll('span')
+    cSpan.forEach((span) => {
+     strong.innerText = strong.innerText * 1 + span.innerText * 1
+    })
+    li_project.append(strong)
+   }
+   //> количество по проекту
 
    ul_projects.append(li_project)
   }
@@ -230,7 +307,19 @@ const getFeedCounts = (feedName) => {
   //> общее количество
 
   output.append(div)
- }).catch((error) => console.log(error))
+ })
+ .then(() => {
+  const aH5 = document.querySelectorAll('h5')
+
+  Array.from(aH5).forEach((h5) => { //console.log('h5', h5);
+   h5.parentElement.addEventListener('click', (e) => { //console.log('e', e.target);
+    document.querySelectorAll(`h5[data-title='${h5.dataset.title}'] + ul`).forEach((ul) => { console.log('ul', ul)
+     ul.classList.toggle('active')
+    })
+   })
+  })
+ })
+ .catch((error) => console.log(error))
 }
 
 const headerChangeSelect = () => {
@@ -243,7 +332,9 @@ const headerChangeSelect = () => {
  $allFiles = array_diff(scandir($path), ['..', '.']);
  $xmlFiles = glob("{$path}*.xml");
  foreach($xmlFiles as $xmlFile){
-  echo " getFeedCounts('" . str_replace($path, '', $xmlFile) . "')\n";
+  //if( stripos($xmlFile, '_sb_') === false ) {
+   echo " getFeedCounts('" . str_replace($path, '', $xmlFile) . "')\n";
+  //}
  }
 ?>
 }

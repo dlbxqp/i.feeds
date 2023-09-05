@@ -45,7 +45,7 @@ HD;
 {$coordinates}   <Phones>
     <PhoneSchema>
      <CountryCode>+7</CountryCode>
-     <Number>49{$v['phone number']['cian']}</Number>
+     <Number>49{$v['phone numbers']['cian']}</Number>
     </PhoneSchema>
    </Phones>
    <JKSchema>

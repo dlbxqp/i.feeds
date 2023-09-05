@@ -12,12 +12,20 @@ $a = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  foreach((array)$building['Sections']['Section'] as $section){ //die('=> <pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
-   $a['FloorsCount'][] = $building['FloorsCount'];
+   //if($building['BuildingGroup'] == 'ЖК «КутузовGRAD»'){
+    $a['finishing'][] = $apartment['FinishTypeId'];
+    $a['material'][] = $building['HouseMaterial'];
+    $a['houseSerie'][] = $building['HouseSeries'];
+   //}
   }
  }
 }
-$a['FloorsCount'] = array_unique($a['FloorsCount']); sort($a['FloorsCount']); reset($a['FloorsCount']);
 
+$a['finishing'] = array_unique($a['finishing']); sort($a['finishing']); reset($a['finishing']);
+echo '<pre>' . print_r($a['finishing'], true) . '</pre>';
 
+$a['material'] = array_unique($a['material']); sort($a['material']); reset($a['material']);
+echo '<pre>' . print_r($a['material'], true) . '</pre>';
 
-die('<pre>' . print_r($a['FloorsCount'], true) . '</pre>');
+$a['houseSerie'] = array_unique($a['houseSerie']); sort($a['houseSerie']); reset($a['houseSerie']);
+echo '<pre>' . print_r($a['houseSerie'], true) . '</pre>';

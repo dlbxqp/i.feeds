@@ -30,7 +30,7 @@ HD;
   <Address>{$v['house']['address']}</Address>
 {$coordinates}  <BuildingType>Жилой дом</BuildingType>
   <Category>Коммерческая недвижимость</Category>
-  <ContactPhone>+749{$v['phone number']['avito']}</ContactPhone>
+  <ContactPhone>+749{$v['phone numbers']['avito']}</ContactPhone>
   <Decoration>Чистовая</Decoration>
   <Floor>{$v['floor number']}</Floor>
   <Floors>{$v['floors count']}</Floors>

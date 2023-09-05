@@ -13,38 +13,66 @@ if(!isset($_POST['feed']) or !is_file($path . $_POST['feed'])){
 
 $aResult = [];
 #
-preg_match_all("/__(.*)\./", $_POST['feed'], $aMatches);
-$feedType = $aMatches[1][0]; //die('<pre>' . print_r($feedType, true) . '</pre>');
+$a_feed = explode('__', $_POST['feed']);
+if(count($a_feed) == 2){
+ $a__ = explode('.', $a_feed[1]);
+ $a_feed[1] = $a__[0];
+} //die('<pre>' . print_r($a_feed, true) . '</pre>');
 #
 $feedContent = file_get_contents($path . $_POST['feed']); //die('$feedContent: ' . $feedContent);
 $xml = simplexml_load_string($feedContent) or die('Error: Cannot create object'); //5623
 //echo "<pre>\r\n" . print_r($xml, TRUE) . '</pre>';
-if(stripos($_POST['feed'], 'avito_') !== false){
+
+if($a_feed[0] == 'avito'){
 
  //preg_match_all('|<p>(.*)</p>|i', (string)$feedContent, $aMatches);
- foreach($xml AS $v){
+ foreach($xml as $v){
   $p = (string)$v->p;
   $b = (string)$v->b;
   if($p == '' or $b == '') continue;
-  $aResult[$p][$b][$feedType] = !isset($aResult[$p][$b][$feedType]) ? 1 : ($aResult[$p][$b][$feedType] + 1);
+  $aResult[$p][$b][ $a_feed[1] ] = !isset($aResult[$p][$b][ $a_feed[1] ]) ? 1 : ($aResult[$p][$b][ $a_feed[1] ] + 1);
  }
 
-} elseif(stripos($_POST['feed'], 'cian_') !== false){
+} elseif($a_feed[0] == 'cian'){
 
- foreach($xml AS $v){
+ foreach($xml as $v){
   $p = (string)$v->JKSchema->Name;
   $b = (string)$v->b;
   if($p == '' or $b == '') continue;
-  $aResult[$p][$b][$feedType] = !isset($aResult[$p][$b][$feedType]) ? 1 : ($aResult[$p][$b][$feedType] + 1);
+  $aResult[$p][$b][ $a_feed[1] ] = !isset($aResult[$p][$b][ $a_feed[1] ]) ? 1 : ($aResult[$p][$b][ $a_feed[1] ] + 1);
  }
 
-} elseif(stripos($_POST['feed'], 'yr_') !== false){
+} elseif($a_feed[0] == 'yr'){
 
- foreach($xml AS $v){
+ foreach($xml as $v){
   $p = isset($v->{'building-name'}) ? (string)$v->{'building-name'} : (string)$v->{'village-name'};
   $b = (string)$v->{'building-section'};
   if($p == '' or $b == '') continue;
-  $aResult[$p][$b][$feedType] = !isset($aResult[$p][$b][$feedType]) ? 1 : ($aResult[$p][$b][$feedType] + 1);
+  $aResult[$p][$b][ $a_feed[1] ] = !isset($aResult[$p][$b][ $a_feed[1] ]) ? 1 : ($aResult[$p][$b][ $a_feed[1] ] + 1);
+ }
+
+} elseif($a_feed[0] == 'ym'){ //die('$xml = ' . print_r($xml, true));
+
+ foreach($xml->shop->offers->offer as $v){
+  $p = (string)$v->p;
+  $b = (string)$v->b; //die($p . ' / ' . $b);
+  if($p == '' or $b == '') continue;
+  $aResult[$p][$b][ $a_feed[1] ] = !isset($aResult[$p][$b][ $a_feed[1] ]) ? 1 : ($aResult[$p][$b][ $a_feed[1] ] + 1);
+ }
+
+} elseif($a_feed[0] == 'dc'){ //die('$xml = ' . print_r($xml, true));
+
+ foreach($xml->complex as $complex){
+  $p = (string)$complex->name; //die('$p = ' . $p);
+  foreach($complex->buildings->building as $building){
+   $b = (string)$building->b; //die('$b = ' . $b);
+/*
+   foreach((array)$building->flats as $flat){
+    $aResult[ $p ][ $b ][ $a_feed[1] ] = !isset($aResult[ $p ][ $b ][ $a_feed[1] ]) ? 1 : ($aResult[ $p ][ $b ][ $a_feed[1] ] + 1);
+   }
+//*/
+   $aResult[ $p ][ $b ][ $a_feed[1] ] = count($building->flats);
+  }
  }
 
 }

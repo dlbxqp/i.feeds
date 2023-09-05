@@ -6,8 +6,7 @@ $aAdditionalData['projects'] = json_decode( file_get_contents(__DIR__ . '/../_ad
 $aAdditionalData['phones'] = json_decode( file_get_contents(__DIR__ . '/../_additional_data/phones.json', true), true );
 #
 #< images
-function getAdditionalImages($projectCode){
- $dir = "additional_data/{$projectCode}/images";
+function getAdditionalImages($dir){
  $url = 'https://wd.ingrad.ru/f2/cron/parking_spaces/' . $dir;
  $a = [];
 
@@ -24,14 +23,16 @@ function getAdditionalImages($projectCode){
 
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
-$a = $aTest = $aDependence = $aDependence_ = [];
+$a = $aTest = $aDependence = $aDependence_ = $aStorageRooms = $aMotoPlaces = $aParkingSpaces = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
+ $isParkingSpaces = ((stripos($building['Name'], 'паркинг') !== false) or (stripos($building['Name'], 'машиноместа') !== false)) ? true : false;
+ $isMotoPlace = ((stripos($building['Name'], 'МХМТС') !== false) or (stripos($building['Name'], 'мото-места') !== false)) ? true : false;
+ $isStorageRoom = (stripos($building['Name'], 'кладовые') !== false) ? true : false;
  if(
-  stripos($building['Name'], 'паркинг') === false
-  and stripos($building['Name'], 'машиноместа') === false
-  //and stripos($building['Name'], 'МХМТС') === false
-  //and stripos($building['Name'], 'мото-места') === false
+  !$isParkingSpaces
+  and !$isMotoPlace
+  and !$isStorageRoom
  ){
   continue;
  }
@@ -44,18 +45,45 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
  #
  $aCurrentProjectAdditionalData = $aAdditionalData['projects'][ $building['BuildingGroupID'] ]; //die('<pre>' . print_r($aCurrentProjectAdditionalData, true) . '</pre>');
 
-
-
  foreach((array)$building['Sections']['Section'] as $section){ //die('=> <pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
-   $title = "Машиноместо {$apartment['Code']} в {$apartment['BuildingGroup']}";
-   $area = (((int)$apartment['SpaceBti'] > 0) ? (double)$apartment['SpaceBti'] : (double)$apartment['SpaceDesign']);
+   #< ...filter
+   if($apartment['StatusCode'] != 4) continue;
 
-   #< зависимые
-   if($apartment['ParkingType'] == 'Зависимый' and is_string($apartment['DependentId'])){
-    $aDependence[ (string)$apartment['Code'] ] = (string)$apartment['DependentId'];
+   if($isStorageRoom){
+    $aStorageRooms[] = (string)$apartment['ArticleId'];
+
+    continue;
+   } else if($isMotoPlace){
+    $aMotoPlaces[] = (string)$apartment['ArticleId'];
+    $title = 'Мото-место';
+   } else{
+    $aParkingSpaces[] = (string)$apartment['ArticleId'];
+    $title = 'Машиноместо';
    }
-   #> зависимые...
+   #> filter
+
+   #< data
+   $title .= " {$apartment['Code']} в {$apartment['BuildingGroup']}";
+
+   $area = $apartment['Quantity'];
+   if(isset($apartment['SpaceBti']) && $apartment['SpaceBti'] !== ''){
+    $area = $apartment['SpaceBti'];
+   }
+   if(isset($apartment['SpaceDesign']) && $apartment['SpaceDesign'] !== ''){
+    $area = $apartment['SpaceDesign'];
+   }
+
+    #< зависимые
+   if(/*$apartment['ParkingType'] == 'Зависимый' and */is_string($apartment['DependentId'])){
+    $aDependence[ (string)$apartment['DependentId'] ][] = (string)$apartment['Code'];
+   }
+    #> зависимые...
+
+   $address = (string)$aCurrentProjectAdditionalData['buildings'][ $building['AddressNumber'] ]['address'];
+   //($address == '') && ($address = (string)$building['AddressGeocoder']['beautified address']); - говорят неверные адреса
+   ($address == '') && ($address = (string)$building['AddressBuild']);
+   #> data
 
    $a[ (string)$apartment['Code'] ] = [
     'project' => [
@@ -69,7 +97,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
      'number' => (string)$building['AddressNumber'], //именно string
      'title' => (string)$building['Name'],
      'region' => (string)$building['AddressRegion'],
-     'address' => (is_array($building['AddressBuild']) ? '' : (string)$building['AddressBuild']),
+     'address' => $address,
      'built year' => count($a_deliveryPeriod) > 1 ? (int)$a_deliveryPeriod[1] : ''
     ],
     'section' => [
@@ -79,27 +107,18 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
     'article type' => (string)$apartment['ArticleType'],
     'code' => (string)$apartment['Code'],
     'crm-membership' => (string)$apartment['AddressName'],
-    'price' => (double)$apartment['Price'],
+    'price' => (double)$apartment['DiscountMax'], //Price
     'area' => $area,
     'title' => (string)$title,
     'description' => (string)$title . " по адресу {$building['AddressBuild']}; секция №{$section['SectionNumber']}",
     'floor number' => (int)$apartment['Floor'],
     'floors count' => abs($building['FloorsCount']),
-    'phone number' => $aAdditionalData['phones']['Машиноместа'],
-    'images' => getAdditionalImages($aCurrentProjectAdditionalData['title'])
+    'phone numbers' => $aAdditionalData['phones']['Машиноместа'],
+    'images' => array_merge(
+     getAdditionalImages('additional_data/images'),
+     getAdditionalImages("additional_data/{$aCurrentProjectAdditionalData['title']}/images")
+    )
    ];
-
-/*
-   #< ...зависимые
-   if(
-    $apartment['ParkingType'] == 'Зависимый' and
-    isset($aDependent[ $apartment['ArticleId'] ])
-   ){
-    $a[ (string)$apartment['Code'] ]['price'] += (double)$aDependent[ (string)$apartment['ArticleId'] ]['price'];
-    $a[ (string)$apartment['Code'] ]['area'] += (double)$aDependent[ (string)$apartment['ArticleId'] ]['area'];
-   }
-   #> зависимые
-*/
 
    #< test
    if(isset($aTest[$aCurrentProjectAdditionalData['title']])){
@@ -114,22 +133,43 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
 
 #< ...зависимые
 foreach($a as $k => $v){
- if(!in_array($v['article id'], $aDependence)) continue;
+ if( !isset($aDependence[ $v['article id'] ]) ) continue;
 
- $aDependence_[$k] = array_search($v['article id'], $aDependence);
-}
+ $aDependence_[$k] = $aDependence[ $v['article id'] ];
+} //die('<pre>' . print_r($aDependence_, true) . '</pre>');
+
+$A = 'Продаётся вместе с ';
 foreach($aDependence_ as $k => $v){
- $price = $a[$k]['price'] + $a[$v]['price'];
- $area = $a[$k]['area'] + $a[$v]['area'];
- $description =  ' ' . 'Продаётся вместе с м/м ';
+ foreach($v as $vv){
+  $price = $a[$k]['price'] + $a[$vv]['price'];
+  $area = $a[$k]['area'] + $a[$vv]['area'];
 
- $a[$k]['price'] = $price;
- $a[$k]['area'] = $area;
- $a[$k]['description'] .= $description . $a[$v]['code'];
+  $description = ' ';
+  if( strstr($a[$k]['description'], $A) === false ){ //($k == 'МРС4п-01-(-2)-03-2080' && $vv == 'МРС4м-01-(-2)-53-020') && die('> ' . stristr($a[$k]['description'], $A) );
+   $description .= $A;
+  } else{
+   $description .= 'и ';
+  }
 
- $a[$v]['price'] = $price;
- $a[$v]['area'] = $area;
- $a[$v]['description'] .= $description . $a[$k]['code'];
+  if( in_array($a[$vv]['article id'], $aStorageRooms) ){ //die('> ' . $a[$vv]['article id']);
+   $description .= " кладовкой ";
+  } else if( in_array($a[$vv]['article id'], $aMotoPlaces) ){ //die('> ' . $a[$vv]['article id']);
+   $description .= " мото-местом ";
+  } else{
+   $description .= " машиноместом ";
+  }
+
+  $a[$k]['price'] = $price;
+  $a[$k]['area'] = $area;
+  $a[$k]['description'] .= $description . $a[$vv]['code'];
+
+/*
+  $a[$vv]['price'] = $price;
+  $a[$vv]['area'] = $area;
+  $a[$vv]['description'] .= $description . $a[$k]['code'];
+*/
+  unset($a[$vv]);
+ }
 }
 #> зависимые
 //echo '<pre>' . print_r($aDependence_, true) . '</pre>';

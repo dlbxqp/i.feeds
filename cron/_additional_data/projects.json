@@ -1,6 +1,6 @@
 {
  "c4a7fd91-6f8f-ea11-8128-005056ba18b6": {
-  "title": "foriver",
+  "title": "zk-foriver",
   "project ids": {
    "cian": 1845793,
    "yr": 2305022,
@@ -12,41 +12,16 @@
    "dc": 287966
   },
   "project declaration": "https:\/\/наш.дом.рф\/files\/86405047-d20d-4aa2-81a5-1ce5da372637?inline=1",
-  "sales department": {
-   "address": "г.Москва, ул.Восточная, д.4, корп.1",
-   "latitude": "55.71489",
-   "longitude": "37.659575",
-   "phone numbers": {
-    "avito": 51322986,
-    "cian": 0,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 51322986,
+   "cian": 0,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "1",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "ул. Восточная, д.4а, стр.3"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "Флагманский проект компании «Инград» - это премиальный жилой квартал FORIVER на берегу Москвы-реки. Уникальный проект, над которым работали шведские и российские архитекторы, лучшие отечественные проектировщики и ландшафтные дизайнеры. Неповторимые природные и искусственные ландшафты на территории, изысканные интерьеры входных групп и лобби в натуральной отделке, квартиры премиум с собственным патио, террасами, мастер-спальнями с гендерными санузлами. Приватное пространство внутри квартала - клаб-хаус для закрытых встреч и мероприятий.  Ансамбль из 11 корпусов на стилобате с тремя акцентными башнями, выходящими на Симоновскую набережную. Закрытый двор с собственной набережной и премиальной инфраструктурой. Дизайнерская отделка и расширенный пакет управления «Умный дом». 700 метров от станции метро \"Автозаводская\". 5 минут до Садового кольца, 10 минут до Кремля.",
   "video": "",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:269"
-    ],
     "building ids": {
      "avito": 1462473,
      "cian": 3575756,
@@ -56,9 +31,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "ef6bf3a0-f8aa-ea11-8129-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462482,
      "cian": 3575759,
@@ -68,9 +40,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "6f6f2dc9-f9aa-ea11-8129-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462492,
      "cian": 3575760,
@@ -80,9 +49,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "167aff20-b576-eb11-812f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462495,
      "cian": 3575761,
@@ -92,9 +58,8 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "57371ca2-85dc-ea11-812d-005056ba18b6"
-    ],
+    "latitude": 55.714490,
+    "longitude": 37.650154,
     "building ids": {
      "avito": 1462497,
      "cian": 3575762,
@@ -104,9 +69,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "51b7e73a-9aba-ea11-812b-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462500,
      "cian": 3575763,
@@ -116,9 +78,6 @@
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "4d0659f7-a207-eb11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462506,
      "cian": 3575764,
@@ -128,9 +87,6 @@
    },
    "8": {
     "address": "",
-    "buildings crm ids": [
-     "77e5aa57-2dec-ea11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462516,
      "cian": 3575765,
@@ -140,9 +96,6 @@
    },
    "9": {
     "address": "",
-    "buildings crm ids": [
-     "5a3a5696-9013-eb11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462520,
      "cian": 3575766,
@@ -150,11 +103,17 @@
      "yr": 2305088
     }
    },
+   "10": {
+    "address": "",
+    "building ids": {
+     "avito": 1462522,
+     "cian": 3575767,
+     "dc": 156471,
+     "yr": 2305089
+    }
+   },
    "11": {
     "address": "",
-    "buildings crm ids": [
-     "d1238044-dcb9-ea11-812b-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1462524,
      "cian": 3575768,
@@ -165,7 +124,7 @@
   }
  },
  "662ddc32-8af7-e711-80ea-005056ba18b6": {
-  "title": "riversky",
+  "title": "zk-riversky",
   "project ids": {
    "cian": 49453,
    "yr": 1698295,
@@ -177,41 +136,16 @@
    "dc": 275837
   },
   "project declaration": "http:\/\/ooo-eco-polis.ru\/data\/uploads\/docs\/pd20190607.pdf",
-  "sales department": {
-   "address": "г.Москва, ул.Восточная, д.4, к.1",
-   "latitude": "55.71489",
-   "longitude": "37.659575",
-   "phone numbers": {
-    "avito": 50215010,
-    "cian": 50212909,
-    "yr": 50210313
-   }
+  "phone numbers": {
+   "avito": 50215010,
+   "cian": 50212909,
+   "yr": 50210313
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "1",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "ул. Восточная, д.4, к.1"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» представляет свой флагманский жилой квартал бизнес-класса. Европейская архитектура домов, дизайнерские входные группы и общественные зоны, авторская концепция благоустройства квартала, интегрированного с Симоновской набережной Москвы-реки. Уникальные форматы жилья: пентхаусы с панорамным остеклением по всему периметру, квартиры с открытыми лоджиями-террасами, таунхаусы с собственной территорией и отдельными входами. Премиальная чистовая отделка помещений, расширенный пакет управления «Умный дом».",
   "video": "https:\/\/youtu.be\/HKzKE0MM1Bk",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "d9af2f75-a99f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73046,
      "cian": 1577776,
@@ -221,9 +155,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "517ba460-b39f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73046,
      "cian": 1251823,
@@ -233,9 +164,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "c545d97a-b39f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73046,
      "cian": 575537,
@@ -245,9 +173,8 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "e8671a06-b49f-e811-80f9-005056ba18b6"
-    ],
+    "latitude": 55.718831,
+    "longitude": 37.655391,
     "building ids": {
      "avito": 73047,
      "cian": 1027007,
@@ -257,9 +184,8 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "6f035221-b49f-e811-80f9-005056ba18b6"
-    ],
+    "latitude": 55.718831,
+    "longitude": 37.655391,
     "building ids": {
      "avito": 73047,
      "cian": 1577777,
@@ -269,9 +195,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "739ab24a-b49f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73048,
      "cian": 1577866,
@@ -281,9 +204,6 @@
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "b22cd269-b49f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73048,
      "cian": 1027021,
@@ -293,9 +213,6 @@
    },
    "8": {
     "address": "",
-    "buildings crm ids": [
-     "70fcf484-b49f-e811-80f9-005056ba18b6"
-    ],
     "building ids": {
      "avito": 73048,
      "cian": 1578025,
@@ -306,7 +223,7 @@
   }
  },
  "b3003808-8bf7-e711-80ea-005056ba18b6": {
-  "title": "tophills",
+  "title": "zk-tophills",
   "project ids": {
    "cian": 1491331,
    "yr": 2058245,
@@ -318,41 +235,16 @@
    "dc": 287377
   },
   "project declaration": "https:\/\/наш.дом.рф\/files\/86405047-d20d-4aa2-81a5-1ce5da372637?inline=1",
-  "sales department": {
-   "address": "г.Москва, Электролитный проезд, владение 7А",
-   "latitude": "55.673656",
-   "longitude": "37.611758",
-   "phone numbers": {
-    "avito": 51322982,
-    "cian": 0,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 51322982,
+   "cian": 0,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "1",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "Электролитный пр-д, вл. 7а"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "e63b4e6a-3894-ea11-8128-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1213156,
      "cian": 2876422,
@@ -362,9 +254,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "05763bd0-5c6f-ea11-8126-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1213179,
      "cian": 2876414,
@@ -374,9 +263,8 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "368a0034-5d6f-ea11-8126-005056ba18b6"
-    ],
+    "latitude": 55.673138,
+    "longitude": 37.609479,
     "building ids": {
      "avito": 1213191,
      "cian": 2876415,
@@ -386,9 +274,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "059fe1f6-3894-ea11-8128-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1213194,
      "cian": 2876423,
@@ -398,9 +283,6 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "67f32b13-3894-ea11-8128-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1213199,
      "cian": 2876424,
@@ -410,9 +292,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "fcd74d78-3a94-ea11-8128-005056ba18b6"
-    ],
     "building ids": {
      "avito": 1213208,
      "cian": 2876425,
@@ -423,7 +302,7 @@
   }
  },
  "dccb2f2e-e09b-e411-81e4-00155d110c01": {
-  "title": "medved",
+  "title": "mkr-novoe-medvedkovo",
   "project ids": {
    "cian": 5915,
    "yr": 42790,
@@ -435,41 +314,16 @@
    "dc": 233750
   },
   "project declaration": "http:\/\/okvartal.ru\/proekt-novoe-medvedkovo\/documentation\/",
-  "sales department": {
-   "address": "г.Москва, ул.Тюменская, вл. 5",
-   "latitude": "55.808837",
-   "longitude": "37.739518",
-   "phone numbers": {
-    "avito": 50215101,
-    "cian": 50214636,
-    "yr": 50211600
-   }
+  "phone numbers": {
+   "avito": 50215101,
+   "cian": 50214636,
+   "yr": 50211600
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Мытищинский муниципальный район",
-   "city": "г. Мытищи",
-   "city region": "мкр. №17-А",
-   "street, house": "проспект Астрахова"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» предлагает готовые квартиры в проекте комплексного освоения территория в зелёном районе города Мытищи. Комфортное жильё, коммерческие помещения, благоустроенные дворы и собственная социальная инфраструктура: детские сады, школы, магазины, спортивные площадки, предприятия бытового и сервисного обслуживания. Общая площадь проекта составляет почти 1 млн. кв. м недвижимости. Квартиры с чистовой отделкой. Многоуровневый паркинг на территории квартала. Благоприятное экологическое окружение: Пироговский лесопарк, Клязьминское и Пироговское водохранилища. 6 км до МКАД по Ярославскому направлению. Часть корпусов заселена.",
   "video": "https:\/\/youtu.be\/JcWY8si3JNQ",
   "buildings": {
    "14": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:191"
-    ],
     "building ids": {
      "avito": 28104,
      "cian": 965069,
@@ -479,9 +333,6 @@
    },
    "15": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:101"
-    ],
     "building ids": {
      "avito": 63201,
      "cian": 42254,
@@ -491,9 +342,6 @@
    },
    "16": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:246"
-    ],
     "building ids": {
      "avito": 75672,
      "cian": 1631501,
@@ -503,9 +351,6 @@
    },
    "17": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:209"
-    ],
     "building ids": {
      "avito": 75673,
      "cian": 613057,
@@ -515,9 +360,6 @@
    },
    "18": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:103"
-    ],
     "building ids": {
      "avito": 50357,
      "cian": 40258,
@@ -527,9 +369,6 @@
    },
    "19": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:165"
-    ],
     "building ids": {
      "avito": 72729,
      "cian": 579367,
@@ -539,9 +378,6 @@
    },
    "20": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:166"
-    ],
     "building ids": {
      "avito": 72730,
      "cian": 579368,
@@ -551,9 +387,8 @@
    },
    "21": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:167"
-    ],
+    "latitude": 55.924159,
+    "longitude": 37.729188,
     "building ids": {
      "avito": 72731,
      "cian": 579369,
@@ -563,9 +398,6 @@
    },
    "22": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:104"
-    ],
     "building ids": {
      "avito": 50355,
      "cian": 97571,
@@ -575,9 +407,6 @@
    },
    "22а": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:106"
-    ],
     "building ids": {
      "avito": 50356,
      "cian": 41305,
@@ -587,9 +416,6 @@
    },
    "25": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:92"
-    ],
     "building ids": {
      "avito": 34937,
      "cian": 6723,
@@ -599,9 +425,6 @@
    },
    "30": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:91"
-    ],
     "building ids": {
      "avito": 27201,
      "cian": 1424,
@@ -611,9 +434,6 @@
    },
    "32": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:94"
-    ],
     "building ids": {
      "avito": 39008,
      "cian": 11648,
@@ -623,9 +443,6 @@
    },
    "33": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:95"
-    ],
     "building ids": {
      "avito": 39009,
      "cian": 11650,
@@ -635,9 +452,6 @@
    },
    "34": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:96"
-    ],
     "building ids": {
      "avito": 39010,
      "cian": 11653,
@@ -647,21 +461,15 @@
    },
    "35": {
     "address": "",
-    "buildings crm ids": [
-     ""
-    ],
     "building ids": {
      "avito": 5685381,
      "cian": 7915851,
-     "dc": 0,
+     "dc": 170046,
      "yr": 3015424
     }
    },
    "36": {
     "address": "",
-    "buildings crm ids": [
-     "1c46dc51-38f7-ea11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2731193,
      "cian": 5778656,
@@ -671,9 +479,6 @@
    },
    "37": {
     "address": "",
-    "buildings crm ids": [
-     "738e157c-89f2-ea11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2891422,
      "cian": 5729740,
@@ -683,9 +488,6 @@
    },
    "38": {
     "address": "",
-    "buildings crm ids": [
-     "2323808c-3d40-eb11-812f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 3061066,
      "cian": 3340588,
@@ -695,21 +497,42 @@
    },
    "39": {
     "address": "",
-    "buildings crm ids": [
-     ""
-    ],
     "building ids": {
      "avito": 5685384,
      "cian": 7915852,
-     "dc": 0,
-     "yr": 3015431
+     "dc": 170047,
+     "yr": 1803523
+    }
+   },
+   "41": {
+    "address": "",
+    "building ids": {
+     "avito": 5926332,
+     "cian": 7949356,
+     "dc": 170328,
+     "yr": 1803555
+    }
+   },
+   "42": {
+    "address": "",
+    "building ids": {
+     "avito": 5926356,
+     "cian": 7949357,
+     "dc": 170329,
+     "yr": 1803562
+    }
+   },
+   "43": {
+    "address": "",
+    "building ids": {
+     "avito": 5926359,
+     "cian": 7949358,
+     "dc": 170330,
+     "yr": 1803571
     }
    },
    "44": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:152"
-    ],
     "building ids": {
      "avito": 63199,
      "cian": 577032,
@@ -719,9 +542,6 @@
    },
    "45": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:235"
-    ],
     "building ids": {
      "avito": 75679,
      "cian": 1631502,
@@ -731,9 +551,6 @@
    },
    "46": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:236"
-    ],
     "building ids": {
      "avito": 75680,
      "cian": 1631503,
@@ -743,9 +560,6 @@
    },
    "47": {
     "address": "",
-    "buildings crm ids": [
-     "01216c11-062a-e911-810c-005056ba18b6"
-    ],
     "building ids": {
      "avito": 28104,
      "cian": 965185,
@@ -755,9 +569,6 @@
    },
    "68": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:194"
-    ],
     "building ids": {
      "avito": 28104,
      "cian": 965262,
@@ -767,9 +578,6 @@
    },
    "69": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:196"
-    ],
     "building ids": {
      "avito": 72738,
      "cian": 582488,
@@ -779,9 +587,6 @@
    },
    "70": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:197"
-    ],
     "building ids": {
      "avito": 72739,
      "cian": 598488,
@@ -792,7 +597,7 @@
   }
  },
  "decb2f2e-e09b-e411-81e4-00155d110c01": {
-  "title": "pushkino",
+  "title": "mkr-novoe-puskino",
   "project ids": {
    "cian": 5523,
    "yr": 20570,
@@ -804,41 +609,16 @@
    "dc": 231788
   },
   "project declaration": "https:\/\/www.ingrad.ru\/netcat_files\/30\/112\/proektnaya_deklaratsiya_zh.d_16.pdf",
-  "sales department": {
-   "address": "г.Пушкино, 36-й км. Ярославского шоссе, вл.1, стр.1",
-   "latitude": "55.984995",
-   "longitude": "37.865283",
-   "phone numbers": {
-    "avito": 50215242,
-    "cian": 50214858,
-    "yr": 50212324
-   }
+  "phone numbers": {
+   "avito": 50215242,
+   "cian": 50214858,
+   "yr": 50212324
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "г. Пушкино",
-   "city": "мкр. «Заветы Ильича»",
-   "city region": "ул. Дзержинского, 35А",
-   "street, house": null
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» представляет готовое жильё в проекте комплексного освоения территории в благополучном районе города Пушкино. ЖК «Новое Пушкино» - это комфортные жилые корпуса, коммерческие помещения на первых этажах, собственная развитая инфраструктура. Общая площадь недвижимости превышает 1,2 млн кв. м. Квартиры с двумя санузлами, с окном в ванной, с гардеробными и кладовыми, с увеличенной площадью остекления. Чистовая отделка в отдельных корпусах. Уникальная природная локация: Пушкинское и Правдинское лесничества, Учинское водохранилище, Тишковский лесопарк, береговая зона реки Серебрянки. 20 минут до МКАД по Ярославскому направлению.",
   "video": "https:\/\/youtu.be\/23YD1CZlwGs",
   "buildings": {
    "6": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:118"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 6а",
     "building ids": {
      "avito": 27488,
      "cian": 6715,
@@ -847,10 +627,7 @@
     }
    },
    "8": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:120"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 8",
     "building ids": {
      "avito": 32318,
      "cian": 2823,
@@ -859,10 +636,7 @@
     }
    },
    "9": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:121"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 9",
     "building ids": {
      "avito": 36251,
      "cian": 6716,
@@ -871,10 +645,7 @@
     }
    },
    "10": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:109"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 10",
     "building ids": {
      "avito": 36250,
      "cian": 28934,
@@ -883,10 +654,7 @@
     }
    },
    "11": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:110"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 11",
     "building ids": {
      "avito": 36252,
      "cian": 6718,
@@ -895,10 +663,7 @@
     }
    },
    "12": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:111"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 12",
     "building ids": {
      "avito": 49818,
      "cian": 6717,
@@ -907,10 +672,7 @@
     }
    },
    "13": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:112"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 13",
     "building ids": {
      "avito": 63205,
      "cian": 37293,
@@ -919,10 +681,7 @@
     }
    },
    "14": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:114"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 14",
     "building ids": {
      "avito": 49819,
      "cian": 33857,
@@ -931,10 +690,7 @@
     }
    },
    "15": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:150"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 15",
     "building ids": {
      "avito": 63355,
      "cian": 577031,
@@ -943,10 +699,7 @@
     }
    },
    "16": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:116"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 16",
     "building ids": {
      "avito": 63206,
      "cian": 41497,
@@ -955,10 +708,9 @@
     }
    },
    "17": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:179"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 17",
+    "latitude": 56.027705,
+    "longitude": 37.856389,
     "building ids": {
      "avito": 70850,
      "cian": 110635,
@@ -967,10 +719,7 @@
     }
    },
    "18": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:184"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 18",
     "building ids": {
      "avito": 70851,
      "cian": 579253,
@@ -979,10 +728,7 @@
     }
    },
    "19": {
-    "address": "",
-    "buildings crm ids": [
-     "19894b71-1ac3-e911-811f-005056ba18b6"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 19",
     "building ids": {
      "avito": 75600,
      "cian": 1852750,
@@ -990,11 +736,30 @@
      "yr": 2067500
     }
    },
+   "20": {
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 20",
+    "latitude": 56.027861,
+    "longitude": 37.867497,
+    "building ids": {
+     "avito": 5933724,
+     "cian": 7979873,
+     "dc": 170519,
+     "yr": 3052484
+    }
+   },
+   "21": {
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 21",
+    "latitude": 56.027954,
+    "longitude": 37.865116,
+    "building ids": {
+     "avito": 5933775,
+     "cian": 7979874,
+     "dc": 170520,
+     "yr": 3052502
+    }
+   },
    "22": {
-    "address": "",
-    "buildings crm ids": [
-     "e0852048-1bc3-e911-811f-005056ba18b6"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 22",
     "building ids": {
      "avito": 75601,
      "cian": 3575405,
@@ -1003,22 +768,18 @@
     }
    },
    "23": {
-    "address": "",
-    "buildings crm ids": [
-     "272c7edd-6783-ec11-813e-005056ba18b6"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 23",
+    "latitude": 56.026151,
+    "longitude": 37.869199,
     "building ids": {
      "avito": 4383750,
      "cian": 7612208,
-     "dc": 0,
+     "dc": 167850,
      "yr": 2874313
     }
    },
    "24": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:245"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 24",
     "building ids": {
      "avito": 75602,
      "cian": 2632296,
@@ -1027,10 +788,7 @@
     }
    },
    "25": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:243"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 25",
     "building ids": {
      "avito": 75603,
      "cian": 600844,
@@ -1039,10 +797,7 @@
     }
    },
    "26": {
-    "address": "",
-    "buildings crm ids": [
-     "apiId:223"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 26",
     "building ids": {
      "avito": 75604,
      "cian": 1852677,
@@ -1051,10 +806,9 @@
     }
    },
    "27": {
-    "address": "г. Пушкино, Московская область, микрорайон Новое Пушкино, к. 27",
-    "buildings crm ids": [
-     "2a3d2509-c721-ec11-813b-005056ba18b6"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 27",
+    "latitude": 56.024959,
+    "longitude": 37.865184,
     "building ids": {
      "avito": 4212517,
      "cian": 7454464,
@@ -1063,13 +817,12 @@
     }
    },
    "28": {
-    "address": "г. Пушкино, Московская область, микрорайон Новое Пушкино, к. 28",
-    "buildings crm ids": [
-     "376a8622-af0c-ec11-813b-005056ba18b6"
-    ],
+    "address": "Московская область, г. Пушкино, мкр. Новое Пушкино, к. 28",
+    "latitude": 56.024350,
+    "longitude": 37.864726,
     "building ids": {
      "avito": 4212603,
-     "cian": 7454464,
+     "cian": 7454465,
      "dc": 166868,
      "yr": 2797993
     }
@@ -1077,9 +830,9 @@
   }
  },
  "5be8b96c-8af7-e711-80ea-005056ba18b6": {
-  "title": "odingrad",
+  "title": "zk-odincovo-mbiryuzova",
   "project ids": {
-   "cian": 118473,
+   "cian": 49287,
    "yr": 1939190,
    "avito": 70278,
    "criteo": 0,
@@ -1089,138 +842,92 @@
    "dc": 275312
   },
   "project declaration": "http:\/\/pr-dolina.ru\/dokumenty\/",
-  "sales department": {
-   "address": "г.Одинцово, улица Маршала Бирюзова 15",
-   "latitude": "55.683116",
-   "longitude": "37.266183",
-   "phone numbers": {
-    "avito": 50214959,
-    "cian": 50212818,
-    "yr": 50210616
-   }
+  "phone numbers": {
+   "avito": 50214959,
+   "cian": 50212818,
+   "yr": 50210616
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Одинцовский район",
-   "city": "Одинцово",
-   "city region": "",
-   "street, house": "ул. Западная"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» предлагает комфортные жилые кварталы в центральной части города Одинцово. Современные дома в ЖК «Одинград Центральный и Лесной» с европейской архитектурой, дизайнерскими входными группами и благоустроенными дворами. На территории реализован уникальный концепт \"Фабрика детства\", включающий современные детские игровые площадки, интерактивные сценарии, безопасное оборудование, удобную систему навигации. В проекте представлены форматы жилья повышенной комфортности: квартиры с лоджиями-террасами, с каминами, с возможностью организовать сауну в помещении, с панорамными гостиными. Высокие потолки, дизайнерская чистовая отделка, система «Умный дом». 10 минут до Москвы по платной трассе, 30 минут – до центра столицы.",
   "video": "https:\/\/youtu.be\/YYMlQAsRz48",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "18d24e07-720a-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70269,
      "cian": 619598,
-     "dc": 149955,
+     "dc": 150675,
      "yr": 2067370
     }
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "7ad42e4b-740a-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70270,
      "cian": 619599,
-     "dc": 149956,
+     "dc": 150676,
      "yr": 2067377
     }
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "13545fd9-790a-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70271,
      "cian": 943335,
-     "dc": 149957,
+     "dc": 152403,
      "yr": 2067385
     }
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "c131b9c9-f33f-e911-810f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70272,
      "cian": 1131009,
-     "dc": 149958,
+     "dc": 152404,
      "yr": 2067404
     }
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "8d8d54e3-f33f-e911-810f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70274,
      "cian": 1273279,
-     "dc": 149959,
+     "dc": 167037,
      "yr": 2067409
     }
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "3cb83c8c-708e-e811-80f4-005056ba18b6"
-    ],
     "building ids": {
      "avito": 59308,
      "cian": 575063,
-     "dc": 146634,
+     "dc": 167038,
      "yr": 1939275
     }
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "eddff672-6f8e-e811-80f4-005056ba18b6"
-    ],
     "building ids": {
      "avito": 59309,
      "cian": 575064,
-     "dc": 148756,
+     "dc": 150677,
      "yr": 1939279
     }
    },
    "8": {
     "address": "",
-    "buildings crm ids": [
-     "2fc23d44-708e-e811-80f4-005056ba18b6"
-    ],
     "building ids": {
      "avito": 59310,
      "cian": 575065,
-     "dc": 148757,
+     "dc": 152405,
      "yr": 1939283
     }
    }
   }
  },
  "f6437d15-f696-e711-80e5-005056ba18b6": {
-  "title": "odingrad_family",
+  "title": "zk-odincovo-zapadnaya",
   "project ids": {
-   "cian": 49287,
+   "cian": 118473,
    "yr": 1677712,
    "avito": 0,
    "criteo": 1997,
@@ -1230,145 +937,100 @@
    "dc": 275312
   },
   "project declaration": "http:\/\/pr-dolina.ru\/dokumenty\/",
-  "sales department": {
-   "address": "г.Одинцово, ул.Маршала Бирюзова 15",
-   "latitude": "55.683116",
-   "longitude": "37.266183",
-   "phone numbers": {
-    "avito": 51252543,
-    "cian": 51252486,
-    "yr": 51252315
-   }
+  "phone numbers": {
+   "avito": 51252543,
+   "cian": 51252486,
+   "yr": 51252315
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Одинцовский район",
-   "city": "Одинцово",
-   "city region": "",
-   "street, house": "ул. Маршала Бирюзова"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» представляет «Одинград Семейный» - жилой квартал с европейской архитектурой и полноценной инфраструктурой. Монолитные корпуса с закрытой дворовой территорией, примыкающей к лесному массиву. Ландшафтный дизайн и благоустройство, спортивные и детские площадки, места для отдыха, прогулок и медитации. Квартиры с панорамными лоджиями. Дизайнерская чистовая отделка и система «Умный дом». Собственный паркинг и гостевая парковка. 10 минут до Москвы по платной скоростной трассе М1.",
   "video": "https:\/\/youtu.be\/YYMlQAsRz48",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "19bc0f63-0e14-e911-810a-005056ba18b6"
-    ],
+    "latitude": 55.679453,
+    "longitude": 37.235088,
     "building ids": {
      "avito": 70275,
      "cian": 812433,
-     "dc": 150675,
+     "dc": 149955,
      "yr": 1939275
     }
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "8612189e-1014-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70276,
      "cian": 1131002,
-     "dc": 150676,
+     "dc": 149956,
      "yr": 1939279
     }
    },
    "3": {
     "address": "",
-    "latitude": "55.678409",
-    "longitude": "37.234611",
-    "buildings crm ids": [
-     "70f93e8b-2988-e911-811c-005056ba18b6"
-    ],
+    "latitude": 55.678409,
+    "longitude": 37.234611,
     "building ids": {
      "avito": 75453,
      "cian": 1422590,
-     "dc": 152403,
+     "dc": 149957,
      "yr": 2045065
     }
    },
    "4": {
     "address": "",
-    "latitude": "55.677895",
-    "longitude": "37.234868",
-    "buildings crm ids": [
-     "b0fd806f-2888-e911-811c-005056ba18b6"
-    ],
+    "latitude": 55.677895,
+    "longitude": 37.234868,
     "building ids": {
      "avito": 75454,
      "cian": 1422591,
-     "dc": 152404,
+     "dc": 149958,
      "yr": 2045070
     }
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "8d8d54e3-f33f-e911-810f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 0,
      "cian": 7490797,
-     "dc": 167037,
+     "dc": 149959,
      "yr": 2805210
     }
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "3cb83c8c-708e-e811-80f4-005056ba18b6"
-    ],
     "building ids": {
      "avito": 0,
      "cian": 7490796,
-     "dc": 167038,
+     "dc": 146634,
      "yr": 2805224
     }
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "118ecec6-1014-e911-810a-005056ba18b6"
-    ],
+    "latitude": 55.678824,
+    "longitude": 37.235761,
     "building ids": {
      "avito": 70277,
      "cian": 812434,
-     "dc": 150677,
+     "dc": 148756,
      "yr": 1939283
     }
    },
    "8": {
     "address": "",
-    "latitude": "55.678176",
-    "longitude": "37.235870",
-    "buildings crm ids": [
-     "34b55663-d29c-e911-811c-005056ba18b6"
-    ],
+    "latitude": 55.678423,
+    "longitude": 37.236175,
     "building ids": {
      "avito": 75455,
      "cian": 2461538,
-     "dc": 152405,
+     "dc": 148757,
      "yr": 2127247
     }
    },
    "9": {
     "address": "",
-    "latitude": "55.678070",
-    "longitude": "37.236639",
-    "buildings crm ids": [
-     "78b19f5e-d39c-e911-811c-005056ba18b6"
-    ],
+    "latitude": 55.678093,
+    "longitude": 37.236642,
     "building ids": {
      "avito": 75456,
      "cian": 2461540,
@@ -1378,11 +1040,10 @@
    },
    "10": {
     "address": "",
-    "buildings crm ids": [
-     "9acbf462-9364-eb11-812f-005056ba18b6"
-    ],
+    "latitude": "",
+    "longitude": "",
     "building ids": {
-     "avito": 0,
+     "avito": 3772868,
      "cian": 7490798,
      "dc": 167039,
      "yr": 2805234
@@ -1391,7 +1052,7 @@
   }
  },
  "fd0a7049-ab0b-e611-80de-00155d110c02": {
-  "title": "petra",
+  "title": "zk-petra-alekseeva-12a",
   "project ids": {
    "cian": 8692,
    "yr": 280020,
@@ -1403,41 +1064,16 @@
    "dc": 266832
   },
   "project declaration": "http:\/\/groupstroy-s.ru\/index.php?id=dokumentaciya",
-  "sales department": {
-   "address": "г.Москва, Можайское шоссе, д.23, стр.2",
-   "latitude": "55.719526",
-   "longitude": "37.426474",
-   "phone numbers": {
-    "avito": 50215060,
-    "cian": 50213202,
-    "yr": 50211323
-   }
+  "phone numbers": {
+   "avito": 50215060,
+   "cian": 50213202,
+   "yr": 50211323
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "Можайский район",
-   "street, house": "ул. Петра Алексеева, вл. 12А"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/_t_KKGtHbk8",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:51"
-    ],
     "building ids": {
      "avito": 42323,
      "cian": 9850,
@@ -1447,9 +1083,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:53"
-    ],
     "building ids": {
      "avito": 42324,
      "cian": 9851,
@@ -1459,9 +1092,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:55"
-    ],
     "building ids": {
      "avito": 42325,
      "cian": 18993,
@@ -1471,9 +1101,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:59"
-    ],
     "building ids": {
      "avito": 42326,
      "cian": 19282,
@@ -1484,7 +1111,7 @@
   }
  },
  "5e79c8bf-fb96-e711-80e5-005056ba18b6": {
-  "title": "kutuzovgrad",
+  "title": "zk-kutuzovgrad",
   "project ids": {
    "cian": 64679,
    "yr": 1902757,
@@ -1496,41 +1123,16 @@
    "dc": 278764
   },
   "project declaration": "http:\/\/globus-holl.ru\/",
-  "sales department": {
-   "address": "г.Москва, ул.Петра Алексеева, 12",
-   "latitude": "55.717912",
-   "longitude": "37.429427",
-   "phone numbers": {
-    "avito": 50216626,
-    "cian": 53248680,
-    "yr": 92292123
-   }
+  "phone numbers": {
+   "avito": 50216626,
+   "cian": 53248680,
+   "yr": 92292123
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "ул. Петра Алексеева, д. 12"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» представляет квартиры в уникальном проекте гольф-класса. «КутузовGRAD II» по своим характеристикам тяготеет к премиальному жилью, оставаясь в сегменте бизнес-класса. Жилой квартал оборудован собственным тренировочным мини-полем для гольфа. Дизайнерские входные группы и места общего пользования, эксклюзивные форматы жилья: спальни с гардеробными и отдельным санузлом, гостиные с панорамным остеклением, двухуровневые квартиры с камином, лоджии с раздвижными стеклянными дверями, ванные комнаты с окном, собственные террасы, угловые лоджии. Квартиры с дизайнерской отделкой бизнес-класса и системой «Умный дом». 3 минуты на автомобиле до Кутузовского проспекта.",
   "video": "https:\/\/youtu.be\/Gft7LZV2goU",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "6c3dd6dd-9815-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70009,
      "cian": 584736,
@@ -1540,9 +1142,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "29c42abe-9915-e911-810a-005056ba18b6"
-    ],
     "building ids": {
      "avito": 70010,
      "cian": 584737,
@@ -1552,9 +1151,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "e51d0fb5-fcca-e911-811f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 100269,
      "cian": 2461106,
@@ -1564,9 +1160,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "613dd6a6-fdca-e911-811f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 100270,
      "cian": 2461196,
@@ -1576,9 +1169,6 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "94f4983f-feca-e911-811f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 100272,
      "cian": 2461107,
@@ -1588,9 +1178,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "17bc17a3-feca-e911-811f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 100271,
      "cian": 2461197,
@@ -1601,7 +1188,7 @@
   }
  },
  "364bd062-e762-e711-80e1-005056ba18b6": {
-  "title": "novo17",
+  "title": "zk-novoceremuskinskaya-17",
   "project ids": {
    "cian": 43098,
    "yr": 388378,
@@ -1613,41 +1200,16 @@
    "dc": 269324
   },
   "project declaration": "http:\/\/sigmahouse.ru\/dokumentaciya\/",
-  "sales department": {
-   "address": "",
-   "latitude": null,
-   "longitude": null,
-   "phone numbers": {
-    "avito": 0,
-    "cian": 0,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 0,
+   "cian": 0,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "ул. Новочерёмушкинская, вл. 17"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/W40wYoFIS6Y",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:5"
-    ],
     "building ids": {
      "avito": 56847,
      "cian": 97378,
@@ -1657,9 +1219,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:6"
-    ],
     "building ids": {
      "avito": 56888,
      "cian": 97379,
@@ -1669,9 +1228,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:7"
-    ],
     "building ids": {
      "avito": 56919,
      "cian": 97380,
@@ -1681,9 +1237,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:8"
-    ],
     "building ids": {
      "avito": 56943,
      "cian": 97137,
@@ -1694,7 +1247,7 @@
   }
  },
  "50c1c77d-ab0b-e611-80de-00155d110c02": {
-  "title": "mihaylova",
+  "title": "zk-mixailova-31",
   "project ids": {
    "cian": 30377,
    "yr": 346196,
@@ -1706,41 +1259,18 @@
    "dc": 253957
   },
   "project declaration": "http:\/\/masterwill.ru\/documents\/",
-  "sales department": {
-   "address": "г.Москва, ул.Михайлова, д.31",
-   "latitude": "55.725843",
-   "longitude": "37.774068",
-   "phone numbers": {
-    "avito": 50215070,
-    "cian": 50214353,
-    "yr": 50211404
-   }
+  "phone numbers": {
+   "avito": 50215070,
+   "cian": 50214353,
+   "yr": 50211404
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "ул. Михайлова, вл. 31"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/iCvMj2V_4nE",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:63"
-    ],
+    "latitude": 55.725138,
+    "longitude": 37.775272,
     "building ids": {
      "avito": 49047,
      "cian": 80277,
@@ -1751,11 +1281,11 @@
   }
  },
  "54a82767-85da-e711-80e8-005056ba18b6": {
-  "title": "filatovlug",
+  "title": "zk-filatov-lug",
   "project ids": {
    "cian": 46322,
    "yr": 888309,
-   "avito": 0,
+   "avito": 54629,
    "criteo": 1861,
    "dc": 109364
   },
@@ -1763,53 +1293,27 @@
    "dc": 271301
   },
   "project declaration": "http:\/\/businessgroupp.ru\/index.php?id=dokumentaciya",
-  "sales department": {
-   "address": "пос.Московский, д.Картмазово",
-   "latitude": "55.611234",
-   "longitude": "37.385193",
-   "phone numbers": {
-    "avito": 50211411,
-    "cian": 50214656,
-    "yr": 50211606
-   }
+  "phone numbers": {
+   "avito": 50211411,
+   "cian": 50214656,
+   "yr": 50211606
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "поселение Московский",
-   "street, house": "д. Картмазово, уч. 16\/1"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» предлагает квартиры в жилом квартал комфорт-класса «Филатов Луг» в Новой Москве. 10 корпусов, коммерческие помещения на первых этажах, собственная инфраструктура на территории: детские сады, школа, кафе, химчистка, продовольственные магазины, фермерский гастромаркет, спортивные и игровые площадки. 5 км до МКАД, станция метро \"Филатов Луг\" в шаговой доступности, удобные выезды на скоростное Киевское шоссе. Часть жилых корпусов сдана в эксплуатацию, дома заселяются.",
   "video": "https:\/\/youtu.be\/iCvMj2V_4nE",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "4c28a321-8dda-e711-80e8-005056ba18b6"
-    ],
+    "latitude": 55.614724,
+    "longitude": 37.384954,
     "building ids": {
      "avito": 54625,
      "cian": 103763,
-     "dc": 143596,
+     "dc": 143396,
      "yr": 1541969
     }
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "59658a9d-87da-e711-80e8-005056ba18b6"
-    ],
     "building ids": {
      "avito": 54626,
      "cian": 103766,
@@ -1819,9 +1323,8 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "386ac1e4-fd5f-e811-80ee-005056ba18b6"
-    ],
+    "latitude": 55.613941,
+    "longitude": 37.386813,
     "building ids": {
      "avito": 54627,
      "cian": 103767,
@@ -1831,9 +1334,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "3436354f-d64e-e811-80ed-005056ba18b6"
-    ],
     "building ids": {
      "avito": 54628,
      "cian": 103768,
@@ -1844,7 +1344,7 @@
   }
  },
  "7a1bdc74-ab0b-e611-80de-00155d110c02": {
-  "title": "vavilove",
+  "title": "zk-vavilova-69",
   "project ids": {
    "cian": 8691,
    "yr": 279922,
@@ -1856,41 +1356,16 @@
    "dc": 266831
   },
   "project declaration": "http:\/\/stoa17.ru\/index.php?id=dokumenty",
-  "sales department": {
-   "address": "",
-   "latitude": null,
-   "longitude": null,
-   "phone numbers": {
-    "avito": 50215090,
-    "cian": 50214505,
-    "yr": 50211511
-   }
+  "phone numbers": {
+   "avito": 50215090,
+   "cian": 50214505,
+   "yr": 50211511
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "1",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "Ломоносовский район",
-   "street, house": "ул. Вавилова, вл. 69а"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/XjDpMxpizqo",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "7a1bdc74-ab0b-e611-80de-00155d110c02"
-    ],
     "building ids": {
      "avito": 42820,
      "cian": 9849,
@@ -1901,7 +1376,7 @@
   }
  },
  "9cd581b5-1b54-eb11-812f-005056ba18b6": {
-  "title": "milovidnoe",
+  "title": "zk-milovidnoe",
   "project ids": {
    "cian": 3419754,
    "yr": 2640381,
@@ -1913,41 +1388,18 @@
    "dc": 295516
   },
   "project declaration": "",
-  "sales department": {
-   "address": "",
-   "latitude": null,
-   "longitude": null,
-   "phone numbers": {
-    "avito": 51823241,
-    "cian": 51822491,
-    "yr": 51823253
-   }
+  "phone numbers": {
+   "avito": 51823241,
+   "cian": 51822491,
+   "yr": 51823253
   },
-  "parking": {
-   "accessibility": "open",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Ленинский г\/о",
-   "city": "пос. Развилка",
-   "city region": "",
-   "street, house": ""
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» предлагает строящееся жильё в жилом квартале «Миловидное» в подмосковном посёлке Развилка Ленинского района. Два 17-этажных корпуса с собственной инфраструктурой на первых этажах и благоустроенной территорией площадью в 1 га. Дворы без машин, детские и игровые площадки, зоны отдыха и воркаут. Безбарьерная среда с подъездами на уровне земли, колясочными для хранения, собственной парковкой. Квартиры до 90 кв. м с просторными 25-метровыми кухнями и отдельными гардеробными. 1 км до МКАД, 10 минут на автомобиле по Каширскому шоссе, 20 минут до станций метро \"Домодедовская\", \"Красногвардейская\" и \"Зябликово\".",
   "video": "",
   "buildings": {
    "1": {
-    "address": "",
-    "buildings crm ids": [
-     "20875d94-a9ce-eb11-8139-005056ba18b6"
-    ],
+    "address": "Московская область, Ленинский городской округ, поселок Развилка, 207ю",
+    "latitude": 55.593217,
+    "longitude": 37.758087,
     "building ids": {
      "avito": 3253796,
      "cian": 6692847,
@@ -1956,10 +1408,9 @@
     }
    },
    "2": {
-    "address": "",
-    "buildings crm ids": [
-     "fef4de29-38cf-eb11-8139-005056ba18b6"
-    ],
+    "address": "Московская область, Ленинский городской округ, поселок Развилка, 207ю",
+    "latitude": 55.592792,
+    "longitude": 37.760166,
     "building ids": {
      "avito": 3253860,
      "cian": 6692848,
@@ -1970,7 +1421,7 @@
   }
  },
  "b4164828-f696-e711-80e5-005056ba18b6": {
-  "title": "sp",
+  "title": "zk-serebryanyi-park",
   "project ids": {
    "cian": 45317,
    "yr": 786635,
@@ -1982,41 +1433,16 @@
    "dc": 273165
   },
   "project declaration": "http:\/\/serebr-bor.ru\/documents.html",
-  "sales department": {
-   "address": "г.Москва, ул.Паршина, вл.10а",
-   "latitude": "55.789750",
-   "longitude": "37.456468",
-   "phone numbers": {
-    "avito": 50215040,
-    "cian": 50213130,
-    "yr": 50211303
-   }
+  "phone numbers": {
+   "avito": 50215040,
+   "cian": 50213130,
+   "yr": 50211303
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "1",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "Хорошево-Мневники",
-   "street, house": "ул. Паршина, вл. 10"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» предлагает квартиры в квартале бизнес-класса «Серебряный парк», который находится в одном из лучших мест Москвы Серебряном бору. Авторская архитектура с разновысотными корпусами создаёт приватное внутридворовое пространство с благоустройством от Wowhaus. Собственная инфраструктура премиального класса включает торговую галерею, ресторан, фермерский магазин, кофейню, фитнес-клуб с бассейном. Уникальные форматы жилья: пентхаусы и квартиры со вторым светом, открытые террасы с панорамными видами Москвы и Серебряного бора. Квартиры с дизайнерской отделкой \"премиум\", система «Умный дом». Частный детский сад с углубленным изучением английского языка. Подземный паркинг. 10 минут до пляжей Серебряного бора и Строгинского затона. 20 минут на автомобиле до Кремлёвской набережной.",
   "video": "https:\/\/youtu.be\/QnfPprkUQsg",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:65"
-    ],
     "building ids": {
      "avito": 50711,
      "cian": 101659,
@@ -2026,9 +1452,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:66"
-    ],
     "building ids": {
      "avito": 50712,
      "cian": 101660,
@@ -2038,9 +1461,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "a83a8425-51ae-e711-80e6-005056ba18b6"
-    ],
     "building ids": {
      "avito": 50713,
      "cian": 101661,
@@ -2050,9 +1470,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "d13be5c6-51ae-e711-80e6-005056ba18b6"
-    ],
     "building ids": {
      "avito": 50714,
      "cian": 101662,
@@ -2062,9 +1479,6 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:70"
-    ],
     "building ids": {
      "avito": 50715,
      "cian": 101663,
@@ -2074,9 +1488,8 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "8aeb57a3-53ae-e711-80e6-005056ba18b6"
-    ],
+    "latitude": 55.790362,
+    "longitude": 37.458085,
     "building ids": {
      "avito": 50716,
      "cian": 101664,
@@ -2087,7 +1500,7 @@
   }
  },
  "b899b3ff-f596-e711-80e5-005056ba18b6": {
-  "title": "lesoparkovy",
+  "title": "zk-lesoparkovyi",
   "project ids": {
    "cian": 45963,
    "yr": 888402,
@@ -2099,41 +1512,16 @@
    "dc": 270945
   },
   "project declaration": "http:\/\/strbgr.ru\/index.php?id=documents",
-  "sales department": {
-   "address": "г.Москва, Варшавское шоссе, 170Ес39",
-   "latitude": "55.582377",
-   "longitude": "37.578833",
-   "phone numbers": {
-    "avito": 50215343,
-    "cian": 50215335,
-    "yr": 50211060
-   }
+  "phone numbers": {
+   "avito": 50215343,
+   "cian": 50215335,
+   "yr": 50211060
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "1",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": "Варшавское шоссе, вл. 170Е"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/3dsYkDZYhKE",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:27"
-    ],
     "building ids": {
      "avito": 56851,
      "cian": 103014,
@@ -2143,9 +1531,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:28"
-    ],
     "building ids": {
      "avito": 56892,
      "cian": 104956,
@@ -2155,9 +1540,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:29"
-    ],
     "building ids": {
      "avito": 56923,
      "cian": 104957,
@@ -2167,9 +1549,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:30"
-    ],
     "building ids": {
      "avito": 56945,
      "cian": 104958,
@@ -2179,9 +1558,6 @@
    },
    "5": {
     "address": "г. Москва, Варшавское шоссе, д. 168",
-    "buildings crm ids": [
-     "5efd9c84-17d4-e711-80e8-005056ba18b6"
-    ],
     "building ids": {
      "avito": 56970,
      "cian": 575203,
@@ -2191,9 +1567,6 @@
    },
    "6": {
     "address": "г. Москва, Варшавское шоссе, д. 168",
-    "buildings crm ids": [
-     "apiId:144"
-    ],
     "building ids": {
      "avito": 56984,
      "cian": 575204,
@@ -2203,9 +1576,6 @@
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:151"
-    ],
     "building ids": {
      "avito": 56990,
      "cian": 578138,
@@ -2216,7 +1586,7 @@
   }
  },
  "c8ee8346-f696-e711-80e5-005056ba18b6": {
-  "title": "preobrazhenie",
+  "title": "zk-preobrazenie-tyumenskaya",
   "project ids": {
    "cian": 1701,
    "yr": 1550821,
@@ -2228,41 +1598,16 @@
    "dc": 273238
   },
   "project declaration": "http:\/\/global-gr.ru\/dokumenty\/",
-  "sales department": {
-   "address": "г.Москва, ул.Тюменская, вл.5",
-   "latitude": "55.808837",
-   "longitude": "37.739518",
-   "phone numbers": {
-    "avito": 50215030,
-    "cian": 50213050,
-    "yr": 50210717
-   }
+  "phone numbers": {
+   "avito": 50215030,
+   "cian": 50213050,
+   "yr": 50210717
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Москва",
-   "district": "",
-   "city": "",
-   "city region": "район Богородское",
-   "street, house": "Тюменский проезд, вл. 3-5"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "https:\/\/youtu.be\/3CUfQ9CXqNg",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:33"
-    ],
     "building ids": {
      "avito": 56866,
      "cian": 106866,
@@ -2272,9 +1617,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:34"
-    ],
     "building ids": {
      "avito": 56905,
      "cian": 106867,
@@ -2284,9 +1626,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:133"
-    ],
     "building ids": {
      "avito": 56932,
      "cian": 106868,
@@ -2296,9 +1635,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "c5d91977-f728-e811-80ec-005056ba18b6"
-    ],
     "building ids": {
      "avito": 56954,
      "cian": 575222,
@@ -2308,9 +1644,6 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:200"
-    ],
     "building ids": {
      "avito": 71888,
      "cian": 1061861,
@@ -2320,9 +1653,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:208"
-    ],
     "building ids": {
      "avito": 71889,
      "cian": 1126577,
@@ -2332,9 +1662,6 @@
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:210"
-    ],
     "building ids": {
      "avito": 71890,
      "cian": 1126578,
@@ -2344,9 +1671,6 @@
    },
    "8": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:180"
-    ],
     "building ids": {
      "avito": 71891,
      "cian": 589882,
@@ -2356,9 +1680,6 @@
    },
    "9": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:181"
-    ],
     "building ids": {
      "avito": 71892,
      "cian": 811847,
@@ -2368,9 +1689,6 @@
    },
    "10": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:231"
-    ],
     "building ids": {
      "avito": 71886,
      "cian": 1126579,
@@ -2380,9 +1698,8 @@
    },
    "11": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:232"
-    ],
+    "latitude": 55.811680,
+    "longitude": 37.742294,
     "building ids": {
      "avito": 71887,
      "cian": 1126580,
@@ -2393,7 +1710,7 @@
   }
  },
  "f93d4a5b-844a-e711-80db-005056ba18b6": {
-  "title": "vesna",
+  "title": "zk-vesna",
   "project ids": {
    "cian": 5946,
    "yr": 67602,
@@ -2405,41 +1722,16 @@
    "dc": 232475
   },
   "project declaration": "https:\/\/www.ingrad.ru\/netcat_files\/194\/1315\/pd_vesna_5_16.pdf",
-  "sales department": {
-   "address": "г.Апрелевка, 27-й км. Киевского шоссе",
-   "latitude": "55.530543",
-   "longitude": "37.067783",
-   "phone numbers": {
-    "avito": 50215141,
-    "cian": 50214757,
-    "yr": 50212313
-   }
+  "phone numbers": {
+   "avito": 50215141,
+   "cian": 50214757,
+   "yr": 50212313
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Наро-Фоминский район",
-   "city": "городское поселение Апрелевка",
-   "city region": "микрорайон «Мартемьяново-7»",
-   "street, house": ""
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "«Инград» представляет новую – финальную – очередь масштабного жилого проекта VESNA в Апрелевке. Новые современные жилые корпуса, квартиры с панорамными лоджиями, собственная коммерческая и социальная инфраструктура, чистовая отделка. Благоустроенная внутренняя территория: детские и спортивные площадки, workout-зоны, новый спорткомплекс «Весна» на прилегающей территории. Обновлённый архитектурный концепт с увеличенной площадью окон и нишами под кондиционеры. Удобные выезды на Киевское шоссе, 20 минут на автомобиле до Москвы.",
   "video": "https:\/\/youtu.be\/9TQzkOW9WSk",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "5caf0371-5756-eb11-812f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2547249,
      "cian": 5325458,
@@ -2449,9 +1741,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "9396890c-d607-eb11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2547353,
      "cian": 5325459,
@@ -2461,9 +1750,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "a9849e18-d707-eb11-812d-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2547357,
      "cian": 5325460,
@@ -2473,9 +1759,6 @@
    },
    "4.1": {
     "address": "",
-    "buildings crm ids": [
-     "38e1a3d6-6156-eb11-812f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2547366,
      "cian": 5325462,
@@ -2485,9 +1768,6 @@
    },
    "4.2": {
     "address": "",
-    "buildings crm ids": [
-     "324409f1-6f56-eb11-812f-005056ba18b6"
-    ],
     "building ids": {
      "avito": 2547366,
      "cian": 5325463,
@@ -2497,9 +1777,6 @@
    },
    "5": {
     "address": "ул. Ясная, д. 3",
-    "buildings crm ids": [
-     "apiId:22"
-    ],
     "building ids": {
      "avito": 27387,
      "cian": 7845,
@@ -2509,9 +1786,6 @@
    },
    "6": {
     "address": "ул. Ясная, д. 4",
-    "buildings crm ids": [
-     "apiId:23"
-    ],
     "building ids": {
      "avito": 27481,
      "cian": 7846,
@@ -2521,9 +1795,6 @@
    },
    "7": {
     "address": "ул. Жасминовая, д. 3",
-    "buildings crm ids": [
-     "apiId:24"
-    ],
     "building ids": {
      "avito": 27564,
      "cian": 7847,
@@ -2533,9 +1804,6 @@
    },
    "8": {
     "address": "ул. Жасминовая, д. 4",
-    "buildings crm ids": [
-     "apiId:25"
-    ],
     "building ids": {
      "avito": 27618,
      "cian": 7848,
@@ -2545,9 +1813,6 @@
    },
    "9": {
     "address": "ул. Ясная, д. 5",
-    "buildings crm ids": [
-     "apiId:26"
-    ],
     "building ids": {
      "avito": 27661,
      "cian": 7849,
@@ -2557,9 +1822,6 @@
    },
    "10": {
     "address": "ул. Ясная, д. 6",
-    "buildings crm ids": [
-     "apiId:15"
-    ],
     "building ids": {
      "avito": 26540,
      "cian": 7850,
@@ -2569,9 +1831,6 @@
    },
    "11": {
     "address": "ул. Жасминовая, д. 5",
-    "buildings crm ids": [
-     "apiId:16"
-    ],
     "building ids": {
      "avito": 26582,
      "cian": 7851,
@@ -2581,9 +1840,6 @@
    },
    "12": {
     "address": "ул. Жасминовая, д. 6",
-    "buildings crm ids": [
-     "apiId:17"
-    ],
     "building ids": {
      "avito": 26623,
      "cian": 7852,
@@ -2593,9 +1849,6 @@
    },
    "13": {
     "address": "ул. Ясная, д. 7",
-    "buildings crm ids": [
-     "apiId:18"
-    ],
     "building ids": {
      "avito": 26655,
      "cian": 2945,
@@ -2605,9 +1858,6 @@
    },
    "14": {
     "address": "",
-    "buildings crm ids": [
-     "aliId:19"
-    ],
     "building ids": {
      "avito": 26677,
      "cian": 2946,
@@ -2617,9 +1867,6 @@
    },
    "15": {
     "address": "ул. Жасминовая, д. 7",
-    "buildings crm ids": [
-     "apiId:20"
-    ],
     "building ids": {
      "avito": 26693,
      "cian": 7843,
@@ -2629,9 +1876,6 @@
    },
    "16": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:21"
-    ],
     "building ids": {
      "avito": 26713,
      "cian": 7844,
@@ -2641,8 +1885,8 @@
    }
   }
  },
- "a1aa119b-8446-eb11-812f-005056ba18b6": {
-  "title": "sholokhovo",
+ "3222e43f-0059-ed11-8141-005056ba18b6": {
+  "title": "zk-inhaus-soloxovo",
   "project ids": {
    "cian": 5821,
    "yr": 166503,
@@ -2655,46 +1899,22 @@
   },
   "filter": {
    "included": [],
-   "excluded": [339],
-   "cottages": [2, 3, 22, 62, 65, 68, 324]
+   "excluded": [],
+   "cottages": []
   },
   "project declaration": "",
-  "sales department": {
-   "address": "",
-   "latitude": "56.043879",
-   "longitude": "37.53879",
-   "phone numbers": {
-    "avito": 54896954,
-    "cian": 50232986,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 54896954,
+   "cian": 50232986,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "",
-   "layer": ""
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Мытищинский район",
-   "city": "деревня Шолохово",
-   "city region": "",
-   "street, house": "ул. Экодолье, стр. 2"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null,
-   "all": "«Экодолье Шолохово» - малоэтажный жилой комплекс, реализуемый Группой компаний «Экодолье» в Московской области, в районе д. Шолохово. Жилой комплекс расположен в 15 км от Москвы по Дмитровскому шоссе, в экологически благоприятном районе. ЖК «Экодолье Шолохово» окружает лесной массив, по территории поселка протекает река Раздериха, на берегу которой запланировано обустройство прогулочной зоны.\n\nВыполненные в едином архитектурном стиле, дома и таунхаусы отличаются продуманностью планировки и высоким качеством отделки фасадов. Здесь созданы все условия для комфортной и безопасной жизни."
-  },
+  "description": "«INHAUS Шолохово» - малоэтажный жилой комплекс в Московской области, в районе д. Шолохово. Жилой комплекс расположен в 15 км от Москвы по Дмитровскому шоссе, в экологически благоприятном районе. ЖК «INHAUS Шолохово» окружает лесной массив, по территории поселка протекает река Раздериха, на берегу которой запланировано обустройство прогулочной зоны.\n\nВыполненные в едином архитектурном стиле, дома и таунхаусы отличаются продуманностью планировки и высоким качеством отделки фасадов. Здесь созданы все условия для комфортной и безопасной жизни.",
   "video": "",
   "buildings": {
-   "1": {
+   "0": {
     "address": "",
-    "buildings crm ids": [
-     "890263f4-3856-eb11-812f-005056ba18b6"
-    ],
+    "latitude": 56.048693,
+    "longitude": 37.523226,
     "building ids": {
      "avito": 0,
      "cian": 0,
@@ -2705,7 +1925,7 @@
   }
  },
  "e1c00ed2-ab9e-e711-80e6-005056ba18b6": {
-  "title": "beregsol",
+  "title": "solnecnyi-bereg",
   "project ids": {
    "cian": 0,
    "yr": 1825302,
@@ -2721,39 +1941,18 @@
    "excluded": []
   },
   "project declaration": "",
-  "sales department": {
-   "address": "",
-   "latitude": "56.372740",
-   "longitude": "36.861461",
-   "phone numbers": {
-    "avito": 51510124,
-    "cian": 51510257,
-    "yr": 51061538
-   }
+  "phone numbers": {
+   "avito": 51510124,
+   "cian": 51510257,
+   "yr": 51061538
   },
-  "parking": {
-   "accessibility": "",
-   "layer": ""
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": ""
-  },
-  "description": {
-   "all": "50 минут от МКАД. Рядом национальный парк. Места для рыбалки. Есть быстрая платная трасса. Готовые коммуникации и огороженная, охраняемая территория."
-  },
+  "description": "Участки в поселке «Солнечный берег» расположены в живописном месте на берегу водохранилища «Солнечное» в Клинском районе. Великолепные виды, чистый воздух, мягкое солнце летом и белоснежные покровы зимой – в жилом поселке «Солнечный берег» круглый год вы обеспечены комфортным проживанием и отличным настроением. Рыбалка в организованных местах, игры на природе, каток в зимний период – у вас появляются неограниченные возможности быть активным и заряжаться здоровьем. Вы можете своими глазами увидеть, как живет поселок, оценить добрососедское окружение, благоустройство и атмосферу жизни в окружении русской природы во всём её великолепии. Побывав однажды в «Солнечном береге», вы захотите построить здесь свой дом.",
   "video": "",
   "buildings": {
-   "second_wave": {
+   "0": {
     "address": "",
-    "buildings crm ids": [
-     "c5de596a-a485-e811-80f3-005056ba18b6"
-    ],
+    "latitude": 56.370777,
+    "longitude": 36.851673,
     "building ids": {
      "avito": 0,
      "cian": 0,
@@ -2764,7 +1963,7 @@
   }
  },
  "81344052-a55c-e711-80dd-005056ba18b6": {
-  "title": "martemianovo",
+  "title": "kp-martemyanovo",
   "project ids": {
    "cian": 0,
    "yr": 0,
@@ -2776,41 +1975,16 @@
    "dc": 0
   },
   "project declaration": "",
-  "sales department": {
-   "address": "",
-   "latitude": "",
-   "longitude": "",
-   "phone numbers": {
-    "avito": 0,
-    "cian": 0,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 0,
+   "cian": 0,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "",
-   "layer": ""
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "",
-   "district": "",
-   "city": "",
-   "city region": "",
-   "street, house": ""
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": "Посёлок Мартемьяново лучший посёлок МО (по версии личного рейтинга Инград)",
   "video": "",
   "buildings": {
    "0": {
     "address": "",
-    "buildings crm ids": [
-     "42376421-a65c-e711-80dd-005056ba18b6"
-    ],
     "building ids": {
      "avito": 0,
      "cian": 0,
@@ -2821,7 +1995,7 @@
   }
  },
  "eacb2f2e-e09b-e411-81e4-00155d110c01": {
-  "title": "aventin",
+  "title": "zk-aventin",
   "project ids": {
    "cian": 6989,
    "yr": 127472,
@@ -2833,41 +2007,18 @@
    "dc": 247280
   },
   "project declaration": "http:\/\/www.lev-shodnya.ru\/approvals\/",
-  "sales department": {
-   "address": "г.Химки, мкр.«Сходня» ул.Железнодорожная, д.33, к.3",
-   "latitude": "55.946965",
-   "longitude": "37.317706",
-   "phone numbers": {
-    "avito": 50215303,
-    "cian": 50214939,
-    "yr": 50212808
-   }
+  "phone numbers": {
+   "avito": 50215303,
+   "cian": 50214939,
+   "yr": 50212808
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "",
-   "city": "городской округ Химки",
-   "city region": "микрорайон Сходня",
-   "street, house": "ул. Железнодорожная"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:171"
-    ],
+    "latitude": 55.947313,
+    "longitude": 37.315801,
     "building ids": {
      "avito": 70531,
      "cian": 607906,
@@ -2877,9 +2028,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:88"
-    ],
     "building ids": {
      "avito": 44185,
      "cian": 33600,
@@ -2889,9 +2037,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:87"
-    ],
     "building ids": {
      "avito": 27060,
      "cian": 3695,
@@ -2902,7 +2047,7 @@
   }
  },
  "bd16ef9b-844a-e711-80db-005056ba18b6": {
-  "title": "pavkvartal",
+  "title": "zk-pavlovskii-kvartal",
   "project ids": {
    "cian": 5968,
    "yr": 83928,
@@ -2914,41 +2059,16 @@
    "dc": 232486
   },
   "project declaration": "https:\/\/www.ingrad.ru\/netcat_files\/378\/2226\/pd.pdf",
-  "sales department": {
-   "address": "Московская область, Истринский район, Павло-Слободское с.п., д.Лобаново, ул.Новая",
-   "latitude": "55.825911",
-   "longitude": "37.139457",
-   "phone numbers": {
-    "avito": 0,
-    "cian": 0,
-    "yr": 0
-   }
+  "phone numbers": {
+   "avito": 0,
+   "cian": 0,
+   "yr": 0
   },
-  "parking": {
-   "accessibility": "ground",
-   "layer": "Наземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "Московская область",
-   "district": "Истринский район",
-   "city": "деревня Лобаново",
-   "city region": "",
-   "street, house": "ул. Новая"
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": "",
   "buildings": {
    "1": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:123"
-    ],
     "building ids": {
      "avito": 62363,
      "cian": 48732,
@@ -2958,9 +2078,6 @@
    },
    "2": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:202"
-    ],
     "building ids": {
      "avito": 62364,
      "cian": 28858,
@@ -2970,9 +2087,6 @@
    },
    "3": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:131"
-    ],
     "building ids": {
      "avito": 62354,
      "cian": 21045,
@@ -2982,9 +2096,6 @@
    },
    "4": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:203"
-    ],
     "building ids": {
      "avito": 62368,
      "cian": 84943,
@@ -2994,9 +2105,6 @@
    },
    "5": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:185"
-    ],
     "building ids": {
      "avito": 62369,
      "cian": 80114,
@@ -3006,9 +2114,6 @@
    },
    "6": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:204"
-    ],
     "building ids": {
      "avito": 62370,
      "cian": 28862,
@@ -3018,9 +2123,6 @@
    },
    "7": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:186"
-    ],
     "building ids": {
      "avito": 62371,
      "cian": 29416,
@@ -3030,9 +2132,6 @@
    },
    "8": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:187"
-    ],
     "building ids": {
      "avito": 62372,
      "cian": 51147,
@@ -3042,9 +2141,6 @@
    },
    "10": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:124"
-    ],
     "building ids": {
      "avito": 26548,
      "cian": 21035,
@@ -3054,9 +2150,6 @@
    },
    "13": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:125"
-    ],
     "building ids": {
      "avito": 26657,
      "cian": 3859,
@@ -3066,9 +2159,6 @@
    },
    "14": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:126"
-    ],
     "building ids": {
      "avito": 26679,
      "cian": 3860,
@@ -3078,9 +2168,6 @@
    },
    "16": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:127"
-    ],
     "building ids": {
      "avito": 26714,
      "cian": 3862,
@@ -3090,9 +2177,6 @@
    },
    "18": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:128"
-    ],
     "building ids": {
      "avito": 26740,
      "cian": 21042,
@@ -3102,9 +2186,6 @@
    },
    "22": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:129"
-    ],
     "building ids": {
      "avito": 62357,
      "cian": 39386,
@@ -3114,9 +2195,6 @@
    },
    "23": {
     "address": "",
-    "buildings crm ids": [
-     "apiId:130"
-    ],
     "building ids": {
      "avito": 62358,
      "cian": 40917,
@@ -3127,7 +2205,7 @@
   }
  },
  "ea1c6d05-b75f-e611-80e0-00155d110c02": {
-  "title": "luchi",
+  "title": "zk-luci",
   "project ids": {
    "cian": 0,
    "yr": 0,
@@ -3139,34 +2217,159 @@
    "dc": 0
   },
   "project declaration": "https:\/\/www.ingrad.ru\/netcat_files\/136\/863\/Proektnaya_deklaratsiya_2_y_PK.pdf",
-  "sales department": {
-   "address": "г.Москва, ул.Производственная, д.4",
-   "latitude": "55.648407",
-   "longitude": "37.386750",
-   "phone numbers": {
-    "avito": 50215251,
-    "cian": 50214909,
-    "yr": 50212606
-   }
+  "phone numbers": {
+   "avito": 50215251,
+   "cian": 50214909,
+   "yr": 50212606
   },
-  "parking": {
-   "accessibility": "underground",
-   "layer": "Подземная"
-  },
-  "security": "0",
-  "fenced area": "0",
-  "address": {
-   "country region": "0",
-   "district": null,
-   "city": null,
-   "city region": null,
-   "street, house": null
-  },
-  "description": {
-   "avito": null,
-   "criteo": null,
-   "dc": null
-  },
+  "description": null,
   "video": ""
- }
+ },
+ "2130f38f-f5d3-e511-80d4-00155d110c02": {
+  "title": "zk-gusarskaya-ballada",
+  "project ids": {
+   "cian": 1471,
+   "yr": 52411,
+   "avito": 25166,
+   "dc": 0
+  },
+  "developer ids": {
+   "dc": 0
+  },
+  "project declaration": "",
+  "phone numbers": {
+   "avito": 51061005,
+   "cian": 51061021,
+   "yr": 51044512
+  },
+  "description": null,
+  "video": "",
+  "buildings": {
+   "11": {
+    "address": "",
+    "latitude": 56.048693,
+    "longitude": 37.523226,
+    "building ids": {
+     "avito": 28936,
+     "cian": 164,
+     "dc": 0,
+     "yr": 54094
+    }
+   },
+   "17": {
+    "address": "",
+    "latitude": 56.048693,
+    "longitude": 37.523226,
+    "building ids": {
+     "avito": 73474,
+     "cian": 2282,
+     "dc": 0,
+     "yr": 2131139
+    }
+   },
+   "23": {
+    "address": "",
+    "latitude": 56.048693,
+    "longitude": 37.523226,
+    "building ids": {
+     "avito": 0,
+     "cian": 172,
+     "dc": 0,
+     "yr": 188481
+    }
+   }
+  }
+ },
+ "c4fa6acb-2f14-ee11-8143-005056ba18b6": {
+  "title": "zk-belyi-mys",
+  "project ids": {
+   "cian": 0,
+   "yr": 0,
+   "avito": 0,
+   "dc": 0
+  },
+  "developer ids": {
+   "dc": 0
+  },
+  "project declaration": "",
+  "phone numbers": {
+   "avito": 0,
+   "cian": 0,
+   "yr": 0
+  },
+  "description": null,
+  "video": "",
+  "buildings": {
+   "11.1": {
+    "address": "Московская область, деревня Челобитьево, жк Белый Мыс, корпус 11.1",
+    "latitude": 55.904565,
+    "longitude": 37.672939,
+    "building ids": {
+     "avito": 0,
+     "cian": 0,
+     "dc": 0,
+     "yr": 0
+    }
+   },
+   "11.2": {
+    "address": "Московская область, деревня Челобитьево, жк Белый Мыс, корпус 11.2",
+    "latitude": 55.904565,
+    "longitude": 37.672939,
+    "building ids": {
+     "avito": 0,
+     "cian": 0,
+     "dc": 0,
+     "yr": 0
+    }
+   },
+   "11.3": {
+    "address": "Московская область, деревня Челобитьево, жк Белый Мыс, корпус 11.3",
+    "latitude": 55.904565,
+    "longitude": 37.672939,
+    "building ids": {
+     "avito": 0,
+     "cian": 0,
+     "dc": 0,
+     "yr": 0
+    }
+   }
+  }
+ },
+ "18959ccf-06a6-ed11-8142-005056ba18b6": {
+        "title": "injoy",
+        "project ids": {
+            "cian": 4437691,
+            "yr": 3625525,
+            "avito": 8277968,
+            "dc": 0,
+            "m2": 1238
+        },
+        "developer ids": {
+            "dc": 119509
+        },
+        "project declaration": "https://xn--80az8a.xn--d1aqf.xn--p1ai/files/70726F6A6465636C2E646F63732E697A643A086AA6F6A0B3469F9233BD4E7518E29F?inline=1",
+        "phone numbers": {
+            "avito": 51045261,
+            "cian": 51321578,
+            "yr": 51321575,
+            "m2": 51522806,
+            "dc": 51522755
+        },
+        "description": "INJOY - новый жилой квартал бизнес-класса на улице Адмирала Макарова в Войковском районе, САО. \nЖК окружен развитой инфраструктурой и хорошей транспортной доступностью: рядом ТРЦ «Метрополис» для активного семейного досуга, выезд на Ленинградское ш., в пешей доступности м. Войковская и МЦК «Балтийская».\nПроектом предусмотрено 10 секций переменной этажности – от 8 до 35 этажей. На этаже от 2 до 7 квартир. Для выбора более 200 типов планировок: от студий в 25 кв. м до квартир с террасами и пентхаусов площадью до 191 кв. м. \nНа территории ЖК расположится детский сад на 325 мест и школа на 750 учеников, а также ФОК с бассейном.\nБлагоустройство INJOY – это множество опций на выбор. Дворы без машин с детскими площадками для разных возрастных категорий, променад на уровне 2 этажа и зоны для занятий спортом. Пешеходный парк-бульвар берет начало на спортивной площади, идет через весь жилой квартал и вливается в событийную площадь около МЦК «Балтийская».\nINJOY расположении недалеко от Химкинского водохранилища в окружении множества парков: Покровское-Стрешнево, Головинских прудов и усадьбы Михалково, парка Северного речного вокзала и т.д.",
+        "video": "",
+        "buildings": {
+            "1": {
+                "address": "Московская область, деревня Челобитьево, жк Белый Мыс, корпус 11.1",
+                "latitude": 55.904565,
+                "longitude": 37.672939,
+                "building ids": {
+                    "avito": 8278335,
+                    "cian": 8665936,
+                    "dc": 177067,
+                    "yr": 3625593,
+                    "m2": 56275
+                }
+            }
+        }
+    }
 }
