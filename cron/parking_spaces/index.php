@@ -23,7 +23,7 @@ function getAdditionalImages($dir){
 
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
-$a = $aTest = $aDependence = $aDependence_ = $aStorageRooms = $aMotoPlaces = $aParkingSpaces = [];
+$a = $aDependence = $aDependence_ = $aStorageRooms = $aMotoPlaces = $aParkingSpaces = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
  $isParkingSpaces = ((stripos($building['Name'], 'паркинг') !== false) or (stripos($building['Name'], 'машиноместа') !== false)) ? true : false;
@@ -178,6 +178,7 @@ foreach($aDependence_ as $k => $v){
 require __DIR__ . "/templates/avito.inc"; echo getAvito($a);
 require __DIR__ . "/templates/cian.inc"; echo getCian($a);
 require __DIR__ . "/templates/yr.inc"; echo getYR($a);
+require __DIR__ . "/templates/ym.inc"; echo getYM($a);
 
 
 (count($aTest) > 0) && die('<pre>' . print_r($aTest, true) . '</pre>');

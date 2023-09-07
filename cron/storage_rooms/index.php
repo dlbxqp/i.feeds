@@ -23,7 +23,7 @@ function getAdditionalImages($dir){
 
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
-$a = $aTest = [];
+$a = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
  if(stripos($building['Name'], 'кладовые') === false) continue;
@@ -94,14 +94,6 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
      getAdditionalImages("additional_data/{$aCurrentProjectAdditionalData['title']}/images")
     )
    ];
-
-   #< test
-   if(isset($aTest[ $aCurrentProjectAdditionalData['title']] )) {
-    $aTest[ $aCurrentProjectAdditionalData['title'] ]++;
-   } else{
-    $aTest[ $aCurrentProjectAdditionalData['title'] ] = 1;
-   }
-   #> test
   }
  }
 }
@@ -110,6 +102,4 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
 require __DIR__ . "/templates/avito.inc"; echo getAvito($a);
 require __DIR__ . "/templates/cian.inc"; echo getCian($a);
 require __DIR__ . "/templates/yr.inc"; echo getYR($a);
-
-
-(count($aTest) > 0) && die('<pre>' . print_r($aTest, true) . '</pre>');
+require __DIR__ . "/templates/ym.inc"; echo getYM($a);

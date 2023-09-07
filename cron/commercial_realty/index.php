@@ -26,8 +26,7 @@ function getAdditionalImages($id){
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
 
-$mainCondition = (date('H') < 23 AND !isset($_GET['full']));
-$a = $aTest = [];
+$a = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
  if(stripos($building['Name'], 'нежилые') === false){
@@ -45,9 +44,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
  foreach((array)$building['Sections']['Section'] as $section){ //die('=> <pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
    #< ...filter
-   if($mainCondition === true){
-    if($apartment['StatusCode'] != 4) continue;
-   }
+   if($apartment['StatusCode'] != 4) continue;
    #> filter
 
    #< data
@@ -116,14 +113,6 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
     'title' => $title,
     'description' => htmlspecialchars($description, ENT_XHTML)
    ];
-
-   #< test
-   if(isset($aTest[$aAdditionalData['projects'][$building['BuildingGroupID']]['title']])) {
-    $aTest[$aAdditionalData['projects'][$building['BuildingGroupID']]['title']]++;
-   } else{
-    $aTest[$aAdditionalData['projects'][$building['BuildingGroupID']]['title']] = 1;
-   }
-   #> test
   }
  }
 }
@@ -133,6 +122,3 @@ require __DIR__ . '/templates/avito.inc'; echo getAvito($a);
 require __DIR__ . '/templates/cian.inc'; echo getCian($a);
 require __DIR__ . '/templates/yr.inc'; echo getYR($a);
 require __DIR__ . "/templates/ym.inc"; echo getYM($a);
-
-
-(count($aTest) > 0) && die('<pre>' . print_r($aTest, true) . '</pre>');

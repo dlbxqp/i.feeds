@@ -37,8 +37,7 @@ function getAdditionalImages($village, $plot){
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
 
-$mainCondition = (date('H') < 23 AND !isset($_GET['full']));
-$a = $aTest = [];
+$a = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  $a_addressNumber = explode('-', $building['AddressNumber']);
  (count($a_addressNumber) > 1) && ( $building['AddressNumber'] = trim($a_addressNumber[0]) );
@@ -63,9 +62,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
  foreach((array)$building['Sections']['Section'] as $section){ //die('<pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
    #< filter
-   if($mainCondition === true){
-    if($apartment['StatusCode'] != 4) continue;
-   }
+   if($apartment['StatusCode'] != 4) continue;
 
    if(
     !isset($aCurrentProjectAdditionalData)
@@ -135,8 +132,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
    /* filter */ if(!($price > 0)) continue;
 
    //$description = $title;
-   $title .= "№{$apartment['BeforeBtiNumber']} площадью {$area} {$unit}."; //по цене {$price} рублей за
-   //$description .= "№{$apartment['BeforeBtiNumber']}, {$area} {$unit}.";
+   $title .= "№{$apartment['BeforeBtiNumber']} площадью {$area} {$unit}.";
 
    $number = 0;
    if(isset($apartment['BtiNumberTxt']) && $apartment['BtiNumberTxt'] !== ''){
@@ -201,14 +197,6 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
    ];
    //( isset($aPlotsData[ (int)$apartment['BeforeBtiNumber'] ]) ) && $a[ (string)$apartment['Code'] ]['plots data'] = $aPlotsData[ (int)$apartment['BeforeBtiNumber'] ];
 
-   #< test
-   if(isset($aTest[$aCurrentProjectAdditionalData['title']])) {
-    $aTest[$aCurrentProjectAdditionalData['title']]++;
-   } else{
-    $aTest[$aCurrentProjectAdditionalData['title']] = 1;
-   }
-   #> test
-
    #< minPrices
    $price = number_format(($price / 1000000), 1);
    #
@@ -234,7 +222,7 @@ file_put_contents(__DIR__ . '/../../../minPrices/suburban.json', json_encode($aM
 echo <<<HD
 <a href="//wd.ingrad.ru/minPrices/suburban.json" target="_blank">//wd.ingrad.ru/minPrices/suburban.json</a>
 <hr>
- 
+
 HD;
 #> minPrices
 
@@ -243,6 +231,3 @@ require __DIR__ . "/templates/avito.inc"; echo getAvito($a);
 require __DIR__ . "/templates/cian.inc"; echo getCian($a);
 require __DIR__ . "/templates/yr.inc"; echo getYR($a);
 require __DIR__ . "/templates/ym.inc"; echo getYM($a);
-
-
-(count($aTest) > 0) && die('<pre>' . print_r($aTest, true) . '</pre>');

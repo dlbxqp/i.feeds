@@ -46,7 +46,6 @@ function getAdditionalApartmentsImages($apartmentCode){ //die('> ' . $projectCod
 $aCompleted = json_decode( file_get_contents(__DIR__ . '/../_data_from_crm/completed.json', true), true);
 //die('<pre>' . print_r($aCompleted, true) . '</pre>');
 
-$mainCondition = (date('H') < 23 AND !isset($_GET['full']));
 $a = $aTest = $aMinPrices = [];
 foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $building['MountingBeginning']);
  #< filter
@@ -91,9 +90,7 @@ foreach($aCompleted as $building){ //die("$building[MountingBeginning] => " . $b
  foreach((array)$building['Sections']['Section'] as $section){ //die('=> <pre>' . print_r($section, true) . '</pre>');
   foreach((array)$section['Apartments'] as $apartment){
    #< ...filter
-   if($mainCondition === true){
-    if($apartment['StatusCode'] != 4) continue;
-   }
+   if($apartment['StatusCode'] != 4) continue;
    #> filter
 
    #< ...data
@@ -295,21 +292,19 @@ HD;
 }
 
 
-if($mainCondition === true){
+/*
 #<...minPrices
- file_put_contents(__DIR__ . '/../../../minPrices/apartments.json', json_encode($aMinPrices) );
- echo <<<HD
+    file_put_contents(__DIR__ . '/../../../minPrices/apartments.json', json_encode($aMinPrices));
+    echo <<<HD
 <a href="//wd.ingrad.ru/minPrices/apartments.json" target="_blank">//wd.ingrad.ru/minPrices/apartments.json</a>
 <hr>
 
 HD;
-#> minPrices
-
- require __DIR__ . '/templates/dc.inc'; echo getDc($a);
- require __DIR__ . '/templates/avito.inc'; echo getAvito($a);
- require __DIR__ . '/templates/cian.inc'; echo getCian($a);
- require __DIR__ . '/templates/yr.inc'; echo getYR($a);
-}
+#> minPrices */
+require __DIR__ . '/templates/dc.inc'; echo getDc($a);
+require __DIR__ . '/templates/avito.inc'; echo getAvito($a);
+require __DIR__ . '/templates/cian.inc'; echo getCian($a);
+require __DIR__ . '/templates/yr.inc'; echo getYR($a);
 require __DIR__ . '/templates/ym.inc'; echo getYM($a);
 
 (count($aTest) > 0) && die('<pre>' . print_r($aTest, true) . '</pre>');
