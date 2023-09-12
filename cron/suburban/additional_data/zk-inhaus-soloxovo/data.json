@@ -1,0 +1,62 @@
+{
+ "2": {
+  "object type": "коттедж",
+  "house area": 169,
+  "rooms": 4,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется",
+  "price": 19963259
+ },
+ "3": {
+  "object type": "коттедж",
+  "house area": 176,
+  "rooms": 4,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется"
+ },
+ "22": {
+  "object type": "коттедж",
+  "house area": 188,
+  "rooms": 5,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется",
+  "price": 22557637
+ },
+ "62": {
+  "object type": "коттедж",
+  "house area": 188,
+  "rooms": 5,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется"
+ },
+ "65": {
+  "object type": "коттедж",
+  "house area": 118,
+  "rooms": 4,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется",
+  "price": 17877781
+ },
+ "68": {
+  "object type": "коттедж",
+  "house area": 176,
+  "rooms": 5,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется",
+  "price": 23372740
+ },
+ "324": {
+  "object type": "коттедж",
+  "house area": 169,
+  "rooms": 5,
+  "floors": 2,
+  "walls type": "Газоблоки",
+  "renovation": "Требуется"
+ }
+}

@@ -1,0 +1,346 @@
+<?php
+require '../assets/includes/ini_set.inc';
+require '../assets/includes/security.inc';
+require '../assets/includes/header.inc';
+?>
+<style>
+body{
+ min-height: auto
+}
+
+main{
+ display: flex; flex-direction: column;
+ position: relative;
+ width: 100vw; min-height: calc(100vh - (10px * 2))
+}
+
+
+header{
+ background-color: rgba(0, 0, 0, 0.02);
+ padding: 10px;
+ width: 100%
+}
+header select{
+ background-color: transparent;
+ padding: 10px
+}
+
+
+output{
+ display: flex;
+ flex-grow: 1;
+ overflow-x: scroll;
+ width: 100%
+}
+
+
+output > div{
+ display: flex; flex-direction: column;
+ order: 1;
+ padding: 10px
+}
+output > div:not(:last-of-type){
+ border-right: 1px dotted rgba(0, 0, 0, 0.2)
+}
+div#crm_data{
+ order: 0
+}
+
+
+h2{
+ font-size: 0.8em;
+ margin-bottom: 10px;
+ white-space: nowrap
+}
+h5,
+h6{
+ font-size: 1em; font-weight: 400;
+ flex-grow: 1
+}
+h5{
+ margin-right: 20px;
+ order: 1
+}
+h6{
+ margin-right: 10px
+}
+
+output > div > div{
+ border-top: 1px dotted rgba(0, 0, 0, 0.2);
+ font-size: 1vmax; text-align: right;
+ padding-top: 1vmin
+}
+
+ul{
+ list-style-type: none
+}
+
+li{
+ display: flex; justify-content: space-between;
+ white-space: nowrap
+}
+li:not(:last-of-type){
+ margin-bottom: 6px
+}
+div > ul > li:not(:last-of-type){
+ margin-bottom: 18px
+}
+
+h2 + ul{
+ flex-grow: 1
+}
+
+strong{
+ order: 2
+}
+
+li > ul{
+ order: 3
+}
+span{
+ color: brown
+}
+
+
+output *{
+ transition: var(--transition)
+}
+
+output > div > ul > li{
+ cursor: pointer
+}
+
+div > ul > li > ul{
+ height: 0;
+ overflow: hidden
+}
+div > ul > li > ul.active{
+ height: auto
+}
+
+
+#crm_data{
+ background-color: white;
+ border-right: 1px solid var(--color-yellow);
+ position: sticky; left: 0
+}
+</style>
+
+
+<header>
+ <select>
+  <option value="commercial realty">Коммерческая недвижимость</option>
+  <option value="parking spaces">Машиноместа</option>
+  <option value="storage rooms">Кладовки</option>
+  <option value="suburban">Загородная недвижимость</option>
+  <option value="apartments">Квартиры</option>
+ </select>
+</header>
+
+<output></output>
+
+
+<script>
+const header = document.querySelector('main > header')
+const select = header.querySelector('select')
+const output = document.querySelector('main > output')
+
+
+const getCRMCounts = () => {
+ axios({
+  method: 'post',
+  url: 'https://wd.ingrad.ru/f2/api/counts/crm/'
+ })
+ .then((response) => { //console.log('response.data', response.data)
+  const data = Object.keys(response.data).sort().reduce(
+   (obj, key) => {
+    obj[key] = response.data[key]
+    return obj
+   },
+   {}
+  )
+
+  const div = document.createElement('div')
+  div.id = 'crm_data'
+  const h2 = document.createElement('h2')
+  h2.textContent = 'CRM'
+  div.append(h2)
+
+  const ul_projects = document.createElement('ul')
+  for(k in data){
+   const ul_houses = document.createElement('ul')
+   for(kk in data[k]){
+    if( !data[k][kk][select.value] ) continue
+
+    const li_house = document.createElement('li')
+
+    if(kk > 0){
+     const h6 = document.createElement('h6')
+     h6.innerText = kk
+     li_house.append(h6)
+    }
+
+    const span = document.createElement('span')
+    span.innerText = data[k][kk][select.value]
+    li_house.append(span)
+
+    ul_houses.append(li_house)
+   }
+   if( !ul_houses.hasChildNodes() ) continue
+
+   const li_project = document.createElement('li')
+   const h5 = document.createElement('h5')
+   h5.dataset.title = h5.innerText = k
+   li_project.append(h5)
+   li_project.append(ul_houses)
+
+   //< количество по проекту
+   {
+    const strong = document.createElement('strong')
+    strong.innerText = 0
+    const cSpan = li_project.querySelectorAll('span')
+    cSpan.forEach((span) => {
+     strong.innerText = strong.innerText * 1 + span.innerText * 1
+    })
+    li_project.append(strong)
+   }
+   //> количество по проекту
+
+   ul_projects.append(li_project)
+  }
+  div.append(ul_projects)
+
+  //> общее количество
+  const div_ = document.createElement('div')
+
+  const counts = ul_projects.querySelectorAll('span')
+  Array.from(counts).forEach((count) => {
+   div_.innerText = (div_.innerText * 1) + (count.innerText * 1)
+  })
+
+  div.append(div_)
+  //> общее количество
+
+  output.append(div)
+ })
+ .catch((error) => console.log(error))
+}
+
+const getFeedCounts = (feedName) => {
+ if(feedName.indexOf(select.value.replace(' ', '_')) === -1){
+  return false
+ }
+
+ axios({
+  method: 'post',
+  url: 'https://wd.ingrad.ru/f2/api/counts/feeds/',
+  data: {
+   'feed': feedName
+  }
+ }).then((response) => { //console.log(feedName, response.data)
+  const data = Object.keys(response.data).sort().reduce(
+   (obj, key) => {
+    obj[key] = response.data[key]
+    return obj
+   },
+   {}
+  )
+
+  const div = document.createElement('div')
+  const h2 = document.createElement('h2')
+  h2.textContent = feedName
+  div.append(h2)
+
+  const ul_projects = document.createElement('ul')
+  for(k in data){ //console.log('k', k)
+   const ul_houses = document.createElement('ul')
+   for(kk in data[k]){ //console.log('kk', kk)
+    if( !data[k][kk][select.value.replace(' ', '_')] ) continue
+
+    const li_house = document.createElement('li')
+
+    if(kk > 0){
+     const h6 = document.createElement('h6')
+     h6.innerText = kk
+     li_house.append(h6)
+    }
+
+    const span = document.createElement('span')
+    span.innerText = data[k][kk][select.value.replace(' ', '_')]
+    li_house.append(span)
+
+    ul_houses.append(li_house)
+   } //console.log('ul_houses.hasChildNodes()', ul_houses.hasChildNodes())
+   if( !ul_houses.hasChildNodes() ) continue
+
+   const li_project = document.createElement('li')
+   const h5 = document.createElement('h5')
+   h5.dataset.title = h5.innerText = k
+   li_project.append(h5)
+   li_project.append(ul_houses)
+
+   //< количество по проекту
+   {
+    const strong = document.createElement('strong')
+    strong.innerText = 0
+    const cSpan = li_project.querySelectorAll('span')
+    cSpan.forEach((span) => {
+     strong.innerText = strong.innerText * 1 + span.innerText * 1
+    })
+    li_project.append(strong)
+   }
+   //> количество по проекту
+
+   ul_projects.append(li_project)
+  }
+  div.append(ul_projects)
+
+  //> общее количество
+  const div_ = document.createElement('div')
+
+  const counts = ul_projects.querySelectorAll('span')
+  Array.from(counts).forEach((count) => {
+   div_.innerText = (div_.innerText * 1) + (count.innerText * 1)
+  })
+
+  div.append(div_)
+  //> общее количество
+
+  output.append(div)
+ })
+ .then(() => {
+  const aH5 = document.querySelectorAll('h5')
+
+  Array.from(aH5).forEach((h5) => { //console.log('h5', h5);
+   h5.parentElement.addEventListener('click', (e) => { //console.log('e', e.target);
+    document.querySelectorAll(`h5[data-title='${h5.dataset.title}'] + ul`).forEach((ul) => { console.log('ul', ul)
+     ul.classList.toggle('active')
+    })
+   })
+  })
+ })
+ .catch((error) => console.log(error))
+}
+
+const headerChangeSelect = () => {
+ output.textContent = ''
+
+ getCRMCounts()
+
+<?php
+ $path = '../';
+ $allFiles = array_diff(scandir($path), ['..', '.']);
+ $xmlFiles = glob("{$path}*.xml");
+ foreach($xmlFiles as $xmlFile){
+  //if( stripos($xmlFile, '_sb_') === false ) {
+   echo " getFeedCounts('" . str_replace($path, '', $xmlFile) . "')\n";
+  //}
+ }
+?>
+}
+
+select.addEventListener('change', headerChangeSelect)
+headerChangeSelect()
+</script>
+<?php
+require '../assets/includes/footer.inc';

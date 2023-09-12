@@ -1,0 +1,12 @@
+aside#message{
+ display: flex; justify-content: center;
+ height: 0;
+ overflow: hidden;
+ position: fixed; top: 0; right: 0; left: 0; z-index: 9;
+ transition: var(--transition)
+}
+aside#message.active{
+ cursor: pointer;
+ height: auto;
+ padding: 10px
+}
